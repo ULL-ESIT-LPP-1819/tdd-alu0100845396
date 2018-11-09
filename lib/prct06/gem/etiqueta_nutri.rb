@@ -29,43 +29,47 @@ class Etiqueta              # Clase Etiqueta
     end
 
     def grasas_kj               # Método para obtener la cantidad de grasas en Kj
-        @grasas * 37
+        (@grasas * 37).round(2)
     end
 
     def grasas_mono_kj          # Método para obtener la cantidad de grasas monosaturadas en Kj
-        @grasas_mono * 37
+        (@grasas_mono * 37).round(2)
     end
 
     def grasas_poli_kj          # Método para obtener la cantidad de grasas polisaturadas en Kj
-        @grasas_poli * 37
+        (@grasas_poli * 37).round(2)
     end
 
     def hidratos_kj             # Método para obtener la cantidad de hidratos de carbono en Kj
-        @hidratos * 17
+        (@hidratos * 17).round(2)
     end
 
     def polialcohol_kj          # Método para obtener la cantidad de hidratos de carbono en Kj
-        @polialcoholes * 10
+        (@polialcoholes * 10).round(2)
     end
 
     def almidon_kj              # Método para obtener la cantidad de almidon en Kj
-        @almidon * 17
+        (@almidon * 17).round(2)
     end
 
     def fibra_kj                # Método para obtener la cantidad de fibra en Kj
-        @fibra * 8
+        (@fibra * 8).round(2)
     end
 
     def proteinas_kj            # Método para obtener la cantidad de proteínas en Kj
-        @proteinas * 17
+        (@proteinas * 17).round(2)
     end
 
     def sal_kj                  # Método para obtener la cantidad de sal en Kj
-        @sal * 25
+        (@sal * 25).round(2)
     end
 
     def valor_ener_kj             # Método para obtener el valor energético en Kj
        val_ener = (grasas_kj + grasas_mono_kj + grasas_poli_kj + hidratos_kj + polialcohol_kj + almidon_kj + fibra_kj + proteinas_kj + sal_kj).round(2)
+    end
+
+    def grasas_kcal
+        (@grasas * 9).round(2)
     end
 
     def to_s            # Método to_s de visualización de datos

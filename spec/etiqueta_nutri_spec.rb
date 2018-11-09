@@ -86,7 +86,7 @@ describe Etiqueta do
         end
 
         it "Probando método para obtener cantidad de grasas en kilocalorías (Kcal)" do
-            expect(@etiqueta.grasa_kcal).to eq(154.8)
+            expect(@etiqueta.grasas_kcal).to eq(154.8)
         end
     end
 end
