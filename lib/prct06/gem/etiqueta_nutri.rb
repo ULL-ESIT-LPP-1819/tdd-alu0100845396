@@ -64,15 +64,15 @@ class Etiqueta              # Clase Etiqueta
         (@sal * 25).round(2)
     end
 
-    def valor_ener_kj             # Método para obtener el valor energético en Kj
+    def valor_ener_kj           # Método para obtener el valor energético en Kj
        val_ener = (grasas_kj + grasas_mono_kj + grasas_poli_kj + hidratos_kj + polialcohol_kj + almidon_kj + fibra_kj + proteinas_kj + sal_kj).round(2)
     end
 
-    def grasas_kcal
+    def grasas_kcal             # Método para obtener grasas en Kcal
         (@grasas * 9).round(2)
     end
 
-    def grasas_mono_kcal
+    def grasas_mono_kcal        # Método para obtener grasas en Kcal
         (@grasas_mono * 9).round(2)
     end
 
