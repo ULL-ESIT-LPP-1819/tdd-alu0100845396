@@ -44,6 +44,10 @@ class Etiqueta              # Clase Etiqueta
         @hidratos * 17
     end
 
+    def polialcohol_kj          # Método para obtener la cantidad de hidratos de carbono en Kj
+        @polialcoholes * 10
+    end
+
     def to_s            # Método to_s de visualización de datos
         puts "(Nombre de etiqueta: #{@nombre}, Grasas: #{@grasas}, Grasas saturadas: #{@grasas_sat}, Grasas monosaturadas: #{@grasas_mono}, Grasas polisaturadas: #{@grasas_poli}, Hidratos: #{@hidratos}, Azúcares: #{@azucares}, Polialcoholes: #{@polialcoholes}, Almidón: #{@almidon}, Fibra: #{@fibra}, Proteinas: #{@proteinas}, Sal: #{@sal})"
     end
