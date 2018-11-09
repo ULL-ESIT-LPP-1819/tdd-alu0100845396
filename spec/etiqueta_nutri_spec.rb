@@ -97,5 +97,8 @@ describe Etiqueta do
         it "Probando método para obtener cantidad de hidratos de carbono en kilocalorías (Kcal)" do
             expect(@etiqueta.hidratos_kcal).to eq(12)
         end
+        it "Probando método para obtener cantidad de polialcoholes en kilocalorías (Kcal)" do
+            expect(@etiqueta.polialcohol_kcal).to eq(0)
+        end
     end
 end
