@@ -115,5 +115,27 @@ describe Etiqueta do
         it "Probando método para obtener de valor energético en kilocalorías (Kcal)" do
             expect(@etiqueta.valor_ener_kcal).to eq(187)
         end
+
+        it "Probando método para obtener %IR valor energético" do
+            expect(@etiqueta.valor_ener_ir).to eq(9.18)
+        end
+        it "Probando método para obtener %IR grasas" do
+            expect(@etiqueta.grasas_ir).to eq(24.57)
+        end
+        it "Probando método para obtener %IR grasas saturadas" do
+            expect(@etiqueta.saturadas_ir).to eq(12)
+        end
+        it "Probando método para obtener %IR hidratos" do
+            expect(@etiqueta.hidratos_ir).to eq(1.15)
+        end
+        it "Probando método para obtener %IR azúcares" do
+            expect(@etiqueta.azucares_ir).to eq(1.56)
+        end
+        it "Probando método para obtener %IR proteínas" do
+            expect(@etiqueta.proteinas_ir).to eq(3)
+        end
+        it "Probando método para obtener %IR sal" do
+            expect(@etiqueta.sal_ir).to eq(21.67)
+        end
     end
 end
