@@ -92,8 +92,12 @@ class Etiqueta              # Clase Etiqueta
         (@almidon * 4).round(2)
     end
 
-    def fibra_kcal
+    def fibra_kcal              # Método para obtener fibra en Kcal
         (@fibra * 2).round(2)
+    end
+
+    def proteinas_kcal          # Método para obtener proteínas en Kcal
+        (@proteinas * 4).round(2)
     end
 
     def to_s            # Método to_s de visualización de datos
