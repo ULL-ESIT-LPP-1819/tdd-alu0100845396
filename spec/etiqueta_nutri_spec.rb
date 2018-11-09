@@ -72,5 +72,8 @@ describe Etiqueta do
         it "Probando método para obtener cantidad de almidón en kilojulios (Kj)" do
             expect(@etiqueta.almidon_kj).to eq(0)
         end
+        it "Probando método para obtener cantidad de fibra en kilojulios (Kj)" do
+            expect(@etiqueta.fibra_kj).to eq(25.6)
+        end
     end
 end
