@@ -11,9 +11,9 @@
 class Etiqueta              # Clase Etiqueta
 
     # Constructor de la clase Etiqueta
-    attr_reader :nombre, :grasas, :grasas_sat, :grasas_mono, :grasas_poli, :hidratos, :azucares, :polialcoholes, :almidon, :proteinas, :sal
+    attr_reader :nombre, :grasas, :grasas_sat, :grasas_mono, :grasas_poli, :hidratos, :azucares, :polialcoholes, :almidon, :fibra, :proteinas, :sal
 
-    def initialize(nombre, grasas, grasas_sat, grasas_mono, grasas_poli, hidratos, azucares, polialcoholes, almidon, proteinas, sal)
+    def initialize(nombre, grasas, grasas_sat, grasas_mono, grasas_poli, hidratos, azucares, polialcoholes, almidon, fibra, proteinas, sal)
         @nombre = nombre
         @grasas = grasas
         @grasas_sat = grasas_sat
@@ -23,6 +23,7 @@ class Etiqueta              # Clase Etiqueta
         @azucares = azucares
         @polialcoholes = polialcoholes
         @almidon = almidon
+        @fibra = fibra
         @proteinas = proteinas
         @sal = sal
     end
