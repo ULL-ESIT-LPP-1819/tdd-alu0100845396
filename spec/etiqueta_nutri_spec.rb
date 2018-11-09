@@ -8,17 +8,13 @@
 
 # encoding: UTF-8
 
-require './etiqueta_nutri.rb'
+require "/Users/OmarM/src/LPP/prct06/lib/prct06/gem/etiqueta_nutri.rb"
 
-describe Prct06 do
+describe Etiqueta do
 
-    describe "# Expectativas de versión" do
-      it 'has a version number' do
-        expect(Prct06::VERSION).not_to be nil
-      end
-    end
-
-    describe Etiqueta do
-
+    describe "#Expectativas para Etiqueta" do
+        it "Probando método para obtener el nombre de la etiqueta"
+            expect(@etiqueta1.nombre).to eq('Guacamole')
+        end
     end
 end
