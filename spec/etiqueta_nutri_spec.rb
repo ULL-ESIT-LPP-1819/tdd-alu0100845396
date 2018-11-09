@@ -55,7 +55,7 @@ describe Etiqueta do
         end
 
         it "Probando método para obtener cantidad de grasas en kilojulios (Kj)" do
-            expect(@etiqueta1.grasa_kj).to eq(636.4)
+            expect(@etiqueta.grasas_kj).to eq(636.4)
         end
     end
 end
