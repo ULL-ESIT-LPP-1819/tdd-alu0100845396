@@ -26,5 +26,11 @@ describe Etiqueta do
         it "Probando método para obtener cantidad de grasas saturadas" do
             expect(@etiqueta.grasas_sat).to eq(2.4)
         end
+        it "Probando método para obtener cantidad de grasas monosaturadas" do
+            expect(@etiqueta.grasas_mono).to eq(0)
+        end
+        it "Probando método para obtener cantidad de grasas polisaturadas"do
+            expect(@etiqueta.grasas_poli).to eq(0)
+        end
     end
 end
