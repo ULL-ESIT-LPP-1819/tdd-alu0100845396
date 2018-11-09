@@ -69,5 +69,8 @@ describe Etiqueta do
         it "Probando método para obtener cantidad de polialcoholes en kilojulios (Kj)" do
             expect(@etiqueta.polialcohol_kj).to eq(0)
         end
+        it "Probando método para obtener cantidad de almidón en kilojulios (Kj)" do
+            expect(@etiqueta.almidon_kj).to eq(0)
+        end
     end
 end
