@@ -20,5 +20,8 @@ describe Etiqueta do
         it "Probando método para obtener el nombre de la etiqueta" do
             expect(@etiqueta.nombre).to eq("Guacamole")
         end
+        it "Probando método para obtener cantidad de grasas" do
+            expect(@etiqueta.grasas).to eq(1)   
+        end    
     end
 end
