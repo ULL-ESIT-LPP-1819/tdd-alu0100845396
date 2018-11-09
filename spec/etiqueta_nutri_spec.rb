@@ -106,5 +106,8 @@ describe Etiqueta do
         it "Probando método para obtener cantidad de fibra en kilocalorías (Kcal)" do
             expect(@etiqueta.fibra_kcal).to eq(6.4)
         end
+        it "Probando método para obtener cantidad de fibra en kilocalorías (Kcal)" do
+            expect(@etiqueta.proteinas_kcal).to eq(6)
+        end
     end
 end
