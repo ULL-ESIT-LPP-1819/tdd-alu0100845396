@@ -60,5 +60,8 @@ describe Etiqueta do
         it "Probando método para obtener cantidad de grasas monosaturadas en kilojulios (Kj)" do
             expect(@etiqueta.grasas_mono_kj).to eq(0)
         end
+        it "Probando método para obtener cantidad de grasas polisaturadas en kilojulios (Kj)" do
+            expect(@etiqueta.grasas_poli_kj).to eq(0)
+        end
     end
 end
