@@ -88,5 +88,8 @@ describe Etiqueta do
         it "Probando método para obtener cantidad de grasas en kilocalorías (Kcal)" do
             expect(@etiqueta.grasas_kcal).to eq(154.8)
         end
+        it "Probando método para obtener cantidad de grasas monosaturadas en kilocalorías (Kcal)" do
+            expect(@etiqueta.grasas_mono_kcal).to eq(0)
+        end
     end
 end
