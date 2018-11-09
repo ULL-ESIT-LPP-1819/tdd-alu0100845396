@@ -32,6 +32,10 @@ class Etiqueta              # Clase Etiqueta
         @grasas * 37
     end
 
+    def grasas_mono_kj          # Método para obtener la cantidad de grasas monosaturadas en Kj
+        @grasas_mono * 37
+    end
+
     def to_s            # Método to_s de visualización de datos
         puts "(Nombre de etiqueta: #{@nombre}, Grasas: #{@grasas}, Grasas saturadas: #{@grasas_sat}, Grasas monosaturadas: #{@grasas_mono}, Grasas polisaturadas: #{@grasas_poli}, Hidratos: #{@hidratos}, Azúcares: #{@azucares}, Polialcoholes: #{@polialcoholes}, Almidón: #{@almidon}, Fibra: #{@fibra}, Proteinas: #{@proteinas}, Sal: #{@sal})"
     end
