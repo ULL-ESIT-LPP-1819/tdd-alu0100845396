@@ -109,5 +109,8 @@ describe Etiqueta do
         it "Probando método para obtener cantidad de proteinas en kilocalorías (Kcal)" do
             expect(@etiqueta.proteinas_kcal).to eq(6)
         end
+        it "Probando método para obtener cantidad de sal en kilocalorías (Kcal)" do
+            expect(@etiqueta.sal_kcal).to eq(7.8)
+        end
     end
 end
