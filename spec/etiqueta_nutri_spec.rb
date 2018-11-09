@@ -103,5 +103,8 @@ describe Etiqueta do
         it "Probando método para obtener cantidad de almidón en kilocalorías (Kcal)" do
             expect(@etiqueta.almidon_kcal).to eq(0)
         end
+        it "Probando método para obtener cantidad de fibra en kilocalorías (Kcal)" do
+            expect(@etiqueta.fibra_kcal).to eq(6.4)
+        end
     end
 end
