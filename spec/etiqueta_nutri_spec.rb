@@ -66,5 +66,8 @@ describe Etiqueta do
         it "Probando método para obtener cantidad de hidratos de carbono en kilojulios (Kj)" do
             expect(@etiqueta.hidratos_kj).to eq(51)
         end
+        it "Probando método para obtener cantidad de polialcoholes en kilojulios (Kj)" do
+            expect(@etiqueta.polialcohol_kj).to eq(0)
+        end
     end
 end
