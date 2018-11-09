@@ -84,8 +84,12 @@ class Etiqueta              # Clase Etiqueta
         (@hidratos * 4).round(2)
     end
 
-    def polialcohol_kcal
+    def polialcohol_kcal        # Método para obtener polialcoholes en Kcal
         (@polialcoholes * 2.4).round(2)
+    end
+
+    def almidon_kcal            # Método para obtener almidón en Kcal
+        (@almidon * 4).round(2)
     end
 
     def to_s            # Método to_s de visualización de datos
