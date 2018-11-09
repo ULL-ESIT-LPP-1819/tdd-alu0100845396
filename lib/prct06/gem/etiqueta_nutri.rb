@@ -60,6 +60,10 @@ class Etiqueta              # Clase Etiqueta
         @proteinas * 17
     end
 
+    def sal_kj                  # Método para obtener la cantidad de sal en Kj
+        @sal * 25
+    end
+
     def to_s            # Método to_s de visualización de datos
         puts "(Nombre de etiqueta: #{@nombre}, Grasas: #{@grasas}, Grasas saturadas: #{@grasas_sat}, Grasas monosaturadas: #{@grasas_mono}, Grasas polisaturadas: #{@grasas_poli}, Hidratos: #{@hidratos}, Azúcares: #{@azucares}, Polialcoholes: #{@polialcoholes}, Almidón: #{@almidon}, Fibra: #{@fibra}, Proteinas: #{@proteinas}, Sal: #{@sal})"
     end
