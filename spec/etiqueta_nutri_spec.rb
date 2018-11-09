@@ -94,5 +94,8 @@ describe Etiqueta do
         it "Probando método para obtener cantidad de grasas polisaturadas en kilocalorías (Kcal)" do
             expect(@etiqueta.grasas_poli_kcal).to eq(0)
         end
+        it "Probando método para obtener cantidad de hidratos de carbono en kilocalorías (Kcal)" do
+            expect(@etiqueta.hidratos_kcal).to eq(12)
+        end
     end
 end

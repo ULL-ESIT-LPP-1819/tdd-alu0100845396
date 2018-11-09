@@ -72,11 +72,11 @@ class Etiqueta              # Clase Etiqueta
         (@grasas * 9).round(2)
     end
 
-    def grasas_mono_kcal        # Método para obtener grasas en Kcal
+    def grasas_mono_kcal        # Método para obtener grasas monosaturadas en Kcal
         (@grasas_mono * 9).round(2)
     end
 
-    def grasas_poli_kcal
+    def grasas_poli_kcal        # Método para obtener grasas polisaturadas en Kcal
         (@grasas_poli * 9).round(2)
     end
 
