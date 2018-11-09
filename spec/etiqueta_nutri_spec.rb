@@ -13,7 +13,7 @@ require "spec_helper"
 describe Etiqueta do
 
     before :each do
-        @etiqueta = Etiqueta.new("Guacamole",1,0,0,0,4.7,4.2,0,0,0,0.5)
+        @etiqueta = Etiqueta.new("Guacamole",17.2,2.4,0,0,4.7,4.2,0,0,0,0.5)
     end
 
     describe "# Expectativas para Etiqueta" do
@@ -21,7 +21,10 @@ describe Etiqueta do
             expect(@etiqueta.nombre).to eq("Guacamole")
         end
         it "Probando método para obtener cantidad de grasas" do
-            expect(@etiqueta.grasas).to eq(1)   
+            expect(@etiqueta.grasas).to eq(17.2)   
         end    
+        it "Probando método para obtener cantidad de grasas saturadas" do
+            expect(@etiqueta.grasas_sat).to eq(2.4)
+        end
     end
 end
