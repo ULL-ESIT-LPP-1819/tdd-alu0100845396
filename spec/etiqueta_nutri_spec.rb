@@ -78,5 +78,8 @@ describe Etiqueta do
         it "Probando método para obtener cantidad de proteínas en kilojulios (Kj)" do
             expect(@etiqueta.proteinas_kj).to eq(25.5)
         end
+        it "Probando método para obtener cantidad de sal en kilojulios (Kj)" do
+            expect(@etiqueta.sal_kj).to eq(32.5)
+        end
     end
 end
