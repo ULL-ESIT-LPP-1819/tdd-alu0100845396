@@ -56,6 +56,10 @@ class Etiqueta              # Clase Etiqueta
         @fibra * 8
     end
 
+    def proteinas_kj            # Método para obtener la cantidad de proteínas en Kj
+        @proteinas * 17
+    end
+
     def to_s            # Método to_s de visualización de datos
         puts "(Nombre de etiqueta: #{@nombre}, Grasas: #{@grasas}, Grasas saturadas: #{@grasas_sat}, Grasas monosaturadas: #{@grasas_mono}, Grasas polisaturadas: #{@grasas_poli}, Hidratos: #{@hidratos}, Azúcares: #{@azucares}, Polialcoholes: #{@polialcoholes}, Almidón: #{@almidon}, Fibra: #{@fibra}, Proteinas: #{@proteinas}, Sal: #{@sal})"
     end
