@@ -36,8 +36,12 @@ class Etiqueta              # Clase Etiqueta
         @grasas_mono * 37
     end
 
-    def grasas_poli_kj
+    def grasas_poli_kj          # Método para obtener la cantidad de grasas polisaturadas en Kj
         @grasas_poli * 37
+    end
+
+    def hidratos_kj             # Método para obtener la cantidad de hidratos de carbono en Kj
+        @hidratos * 17
     end
 
     def to_s            # Método to_s de visualización de datos
