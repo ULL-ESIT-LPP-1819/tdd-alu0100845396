@@ -26,4 +26,8 @@ class Etiqueta              # Clase Etiqueta
         @proteinas = proteinas
         @sal = sal
     end
+
+    def to_s            # Método to_s de visualización de datos
+        puts "(Nombre de etiqueta: #{@nombre}, Grasas: #{@grasas}, Grasas saturadas: #{@grasas_sat}, Grasas monosaturadas: #{@grasas_mono}, Grasas polisaturadas: #{@grasas_poli}, Hidratos: #{@hidratos}, Azúcares: #{@azucares}, Polialcoholes: #{@polialcoholes}, Almidón: #{@almidon}, Fibra: #{@fibra}, Proteinas: #{@proteinas}, Sal: #{@sal})"
+    end
 end

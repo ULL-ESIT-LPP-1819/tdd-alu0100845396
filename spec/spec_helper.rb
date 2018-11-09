@@ -1,3 +1,6 @@
+require "bundler/setup"
+require "prct06/gem"
+
 RSpec.configure do |config|
 
   config.expect_with :rspec do |expectations|

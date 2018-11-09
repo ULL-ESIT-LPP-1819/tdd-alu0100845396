@@ -8,13 +8,17 @@
 
 # encoding: UTF-8
 
-require "/Users/OmarM/src/LPP/prct06/lib/prct06/gem/etiqueta_nutri.rb"
+require "spec_helper"
 
 describe Etiqueta do
 
-    describe "#Expectativas para Etiqueta" do
-        it "Probando método para obtener el nombre de la etiqueta"
-            expect(@etiqueta1.nombre).to eq('Guacamole')
+    before :each do
+        @etiqueta = Etiqueta.new("Guacamole",1,0,0,0,4.7,4.2,0,0,0,0.5)
+    end
+
+    describe "# Expectativas para Etiqueta" do
+        it "Probando método para obtener el nombre de la etiqueta" do
+            expect(@etiqueta.nombre).to eq("Guacamole")
         end
     end
 end
