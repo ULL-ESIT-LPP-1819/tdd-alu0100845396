@@ -48,8 +48,12 @@ class Etiqueta              # Clase Etiqueta
         @polialcoholes * 10
     end
 
-    def almidon_kj
+    def almidon_kj              # Método para obtener la cantidad de almidon en Kj
         @almidon * 17
+    end
+
+    def fibra_kj                # Método para obtener la cantidad de fibra en Kj
+        @fibra * 8
     end
 
     def to_s            # Método to_s de visualización de datos
