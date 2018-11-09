@@ -104,6 +104,10 @@ class Etiqueta              # Clase Etiqueta
         (@sal * 6).round(2)
     end
 
+    def valor_ener_kcal           # Método para obtener valor enerético en Kcal
+        (grasas_kcal + grasas_mono_kcal + grasas_poli_kcal+ hidratos_kcal + polialcohol_kcal + almidon_kcal + fibra_kcal + proteinas_kcal + sal_kcal).round(2)
+    end
+
     def to_s            # Método to_s de visualización de datos
         puts "(Nombre de etiqueta: #{@nombre}, Grasas: #{@grasas}, Grasas saturadas: #{@grasas_sat}, Grasas monosaturadas: #{@grasas_mono}, Grasas polisaturadas: #{@grasas_poli}, Hidratos: #{@hidratos}, Azúcares: #{@azucares}, Polialcoholes: #{@polialcoholes}, Almidón: #{@almidon}, Fibra: #{@fibra}, Proteinas: #{@proteinas}, Sal: #{@sal})"
     end
