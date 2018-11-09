@@ -100,5 +100,8 @@ describe Etiqueta do
         it "Probando método para obtener cantidad de polialcoholes en kilocalorías (Kcal)" do
             expect(@etiqueta.polialcohol_kcal).to eq(0)
         end
+        it "Probando método para obtener cantidad de almidón en kilocalorías (Kcal)" do
+            expect(@etiqueta.almidon_kcal).to eq(0)
+        end
     end
 end
