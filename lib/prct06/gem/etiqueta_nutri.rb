@@ -104,8 +104,36 @@ class Etiqueta              # Clase Etiqueta
         (@sal * 6).round(2)
     end
 
-    def valor_ener_kcal           # Método para obtener valor enerético en Kcal
+    def valor_ener_kcal         # Método para obtener valor enerético en Kcal
         (grasas_kcal + grasas_mono_kcal + grasas_poli_kcal+ hidratos_kcal + polialcohol_kcal + almidon_kcal + fibra_kcal + proteinas_kcal + sal_kcal).round(2)
+    end
+
+    def valor_ener_ir           # Método para obtener %IR valor energético
+        ((valor_ener_kj / 8400) * 100).round(2) 
+    end
+
+    def grasas_ir               # Método para obtener %IR grasas
+        ((@grasas / 70) * 100).round(2)
+    end
+
+    def saturadas_ir            # Método para obtener %IR grasas saturadas
+         ((@grasas_sat / 20) * 100).round(2)
+    end 
+    
+    def hidratos_ir             # Método para obtener %IR hidratos
+         ((@hidratos / 260) * 100).round(2)
+    end
+
+    def azucares_ir             # Método para obtener %IR azúcares
+         ((@azucares / 90) * 100).round(2)
+    end
+
+    def proteinas_ir            # Método para obtener %IR proteínas
+         ((@proteinas / 50) * 100).round(2)
+    end
+
+    def sal_ir                  # Método para obtener %IR sales
+         ((@sal / 6) * 100).round(2)
     end
 
     def to_s            # Método to_s de visualización de datos
