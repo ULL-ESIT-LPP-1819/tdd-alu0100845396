@@ -112,5 +112,8 @@ describe Etiqueta do
         it "Probando método para obtener cantidad de sal en kilocalorías (Kcal)" do
             expect(@etiqueta.sal_kcal).to eq(7.8)
         end
+        it "Probando método para obtener de valor energético en kilocalorías (Kcal)" do
+            expect(@etiqueta.valor_ener_kcal).to eq(187)
+        end
     end
 end
