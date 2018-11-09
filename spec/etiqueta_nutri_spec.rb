@@ -137,5 +137,9 @@ describe Etiqueta do
         it "Probando método para obtener %IR sal" do
             expect(@etiqueta.sal_ir).to eq(21.67)
         end
+
+        it "Probando método para formatear etiqueta" do
+        expect(@etiqueta.to_s) == ('Valores Nutricionales 100g/100ML Guacamoles (Grasas: 17.2, Saturadas: 2.4, MonoSaturadas: 0 , Polisaturadas: 0 , Hidratos: 3 , Azucares: 1.4 , Polialcohol: 0 , Almidon: 0 , Fibra: 3.2 , Proteinas: 1.5 , Sal: 1.3')
+        end
     end
 end
