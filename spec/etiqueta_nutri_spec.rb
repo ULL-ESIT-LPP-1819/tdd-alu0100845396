@@ -84,5 +84,9 @@ describe Etiqueta do
         it "Probando método para obtener de valor energético en kilojulios (Kj)" do
             expect(@etiqueta.valor_ener_kj).to eq(771) 
         end
+
+        it "Probando método para obtener cantidad de grasas en kilocalorías (Kcal)" do
+            expect(@etiqueta.grasa_kcal).to eq(154.8)
+        end
     end
 end
