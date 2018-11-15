@@ -18,6 +18,14 @@ class List
         @tail = node
     end
 
+    def empty?              
+        if @head == nil
+           return true
+        else
+           return false
+        end
+    end
+
     def insert_beginning(node)
         if (@head == nil)
             @head = node
