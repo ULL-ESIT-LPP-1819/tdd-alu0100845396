@@ -8,17 +8,4 @@
 
 # encoding: UTF-8
 
-require "spec_helper"
-
-describe Etiqueta do
-
-    describe Node do
-        describe "# Expectativas para Node" do
-        node = Node.new(2,nil)
-            it 'Node existe' do
-                expect(node.value).to eq(2)
-                expect(node.next).to eq(nil)
-            end
-        end
-    end
-end
+Node = Struct.new(:value, :next, :prev)
