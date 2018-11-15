@@ -48,4 +48,10 @@ class List
             end
         end  
     end
+
+    def insert_multi(nodes)        
+        nodes.each do |nodo| 
+           insert_beginning(nodo)
+        end
+    end
 end 
