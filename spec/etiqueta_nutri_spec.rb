@@ -27,7 +27,11 @@ describe Etiqueta do
             node = Node.new(2, 3, nil)
             list = List.new(node)
             node2 = Node.new(1, nil, nil)
+            list2 = List.new(nil)
 
+            it "List esta vacía" do
+                expect(list2.empty?).to eq(true)
+            end
             it "List existe con su head" do  
                 expect(list.head).to eq(node)    
             end
@@ -37,6 +41,9 @@ describe Etiqueta do
             it "Insertando nodo correctamente" do
                 list.insert_beginning(node2)
                 expect(list.head).to eq(node2)
+            end
+            it "List no está vacía" do
+                expect(list.empty?).to eq(false)
             end
         end
     end
