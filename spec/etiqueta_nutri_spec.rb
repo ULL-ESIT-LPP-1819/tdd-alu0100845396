@@ -16,27 +16,27 @@ describe Etiqueta do
         describe "# Expectativas para Node" do
         node = Node.new(2, 3, nil)
             it 'Node existe' do
-                expect(node.value).to eq(3)
-                expect(node.next).to eq(nil)
-                expect(node.prev).to eq(2)
+                expect(node.value).to eq(2)
+                expect(node.next).to eq(3)
             end
         end
     end
 
     describe List do
-        describe "#Expectativas para List" do
-            Lista.new
+        describe "#Expectativas para Lista" do
             node = Node.new(2, 3, nil)
+            list = List.new(node)
+            node2 = Node.new(1, nil, nil)
 
-            it "Insertar nodo correctamente" do
-                list.insert(node)
-                expect(list.head)to eq(node)
+            it "List existe con su head" do  
+                expect(list.head).to eq(node)    
             end
-            it "Lista existe con su head"
-                expect(list.head)to eq(node)
+            it "List existe con su tail" do
+                expect(list.tail).to eq(node)
             end
-            it "Lista existe con su cola"
-                expect(list.tain)to eq(node)
+            it "Insertando nodo correctamente" do
+                list.insert_beginning(node2)
+                expect(list.head).to eq(node2)
             end
         end
     end
