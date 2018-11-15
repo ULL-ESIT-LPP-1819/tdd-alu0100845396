@@ -34,7 +34,18 @@ class List
             temporal_node = @head.next
             @head = node
             @head.next = temporal_node
-            @head.prev = temporal_node           
-        end      
+            @head.prev = nil          
+        end    
+        def insert_end(node)    
+            if (@head == nil)
+                @head = node
+                @tail = node
+            else         
+                temporal_node = @tail.next
+                @tail = node
+                @tail.next = nil
+                @tail.prev = temporal_node           
+            end
+        end  
     end
 end 
