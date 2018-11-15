@@ -41,6 +41,9 @@ describe Etiqueta do
             it "List existe con su tail" do
                 expect(list.tail).to eq(node)
             end
+            it "Primer nodo extraído correctamente" do       
+                expect(list.extract_beginning).to eq(node)
+            end
             it "Insertando nodo correctamente" do
                 list.insert_beginning(node2)
                 expect(list.head).to eq(node2)
