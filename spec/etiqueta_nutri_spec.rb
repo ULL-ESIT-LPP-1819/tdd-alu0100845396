@@ -28,6 +28,7 @@ describe Etiqueta do
             list = List.new(node)
             node2 = Node.new(1, nil, nil)
             list2 = List.new(nil)
+            node3 = Node.new(2,nil,nil)
 
             it "List esta vacía" do
                 expect(list2.empty?).to eq(true)
@@ -44,6 +45,11 @@ describe Etiqueta do
             end
             it "List no está vacía" do
                 expect(list.empty?).to eq(false)
+            end
+            it "Insertar un node por el final en List" do 
+                list.insert_end(node3)
+                expect(list.tail).to eq(node3)
+                expect(list.head).to eq(node2) 
             end
         end
     end
