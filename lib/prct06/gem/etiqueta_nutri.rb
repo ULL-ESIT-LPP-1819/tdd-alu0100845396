@@ -1,4 +1,4 @@
-# Práctica 6 - Lenguajes y Paradigmas de Programación
+# Práctica 7 - Lenguajes y Paradigmas de Programación
 #
 # La etiqueta de información nutricional es la información sobre el aporte energéico (calórico)
 # y contenido de nutrientes que aparece en los envases de los alimentos y bebidas. También se denomina
