@@ -44,6 +44,9 @@ describe Etiqueta do
             it "Primer nodo extraído correctamente" do       
                 expect(list.extract_beginning).to eq(node)
             end
+            it "Último nodo extraído correctamente" do       
+                expect(list.extract_end).to eq(node3)
+            end
             it "Insertando nodo correctamente" do
                 list.insert_beginning(node2)
                 expect(list.head).to eq(node2)
