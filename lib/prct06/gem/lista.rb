@@ -64,5 +64,15 @@ class List
             @head = @head.next
             return temporal_node
         end
-    end  
+    end
+    
+    def extract_end()     
+        if @tail == nil
+            return nil 
+        else           
+            temporal_node = @tail
+            @tail = @tail.prev
+            return temporal_node       
+        end            
+    end
 end 

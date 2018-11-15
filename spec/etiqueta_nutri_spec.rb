@@ -24,7 +24,7 @@ describe Etiqueta do
 
     describe List do
         describe "#Expectativas para Lista" do
-            node = Node.new(2, 3, nil)
+            node = Node.new(2, 3, 1)
             list = List.new(node)
             node2 = Node.new(1, nil, nil)
             list2 = List.new(nil)
@@ -45,7 +45,7 @@ describe Etiqueta do
                 expect(list.extract_beginning).to eq(node)
             end
             it "Último nodo extraído correctamente" do       
-                expect(list.extract_end).to eq(node3)
+                expect(list.extract_end).to eq(node)
             end
             it "Insertando nodo correctamente" do
                 list.insert_beginning(node2)
