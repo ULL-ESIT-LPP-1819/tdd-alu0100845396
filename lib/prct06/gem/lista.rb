@@ -46,7 +46,7 @@ class List
                 @tail.next = nil
                 @tail.prev = temporal_node           
             end
-        end  
+        end
     end
 
     def insert_multi(nodes)        
@@ -54,4 +54,15 @@ class List
            insert_beginning(nodo)
         end
     end
+
+    def extract_beginning()
+      
+        if @head == nil
+            return nil
+        else
+            temporal_node = @head
+            @head = @head.next
+            return temporal_node
+        end
+    end  
 end 
