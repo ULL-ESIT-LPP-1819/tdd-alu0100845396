@@ -68,6 +68,53 @@ describe Etiqueta do
 
     describe ListValue do
 
+        before :each do
+            etiqueta_ = Etiqueta.new("Guacamole",17.2,2.4,0,0,3,1.4,0,0,3.2,1.5,5)
+            etiqueta2_ = Etiqueta.new("Cereales",7,4,0,0,71,36,0,46,4,0,6)
+            etiqueta3_ = Etiqueta.new("Zumo de naranja",0.1,0,0,0,9.5,8.9,0,0,0.6,0.6,1)
+            etiqueta4_ = Etiqueta.new("Jamón ibérico",21.9,6.3,0,0,0.5,0.5,0,0,0.1,30,9)
+            etiqueta5_ = Etiqueta.new("Jamón",21.9,6.3,0,0,0.5,0.5,0,0,0.1,30,10)
+            etiqueta6_ = Etiqueta.new("Salmón",54,6,0,0,4,0,6,7,0,0,8)
+        end
+
+        describe "# creando la lista con etiquetas" do
+
+            it "se inserta correctamente en la lista " do
+                list3 = ListValue.new()
+                expect(list3.insert_val(@etiqueta_)).to be_a(Node)
+            end
+    
+            it "se extrae correctamente de la lista" do
+                list3 = ListValue.new()
+                expect(list3.insert_val(@etiqueta_)).to be_a(Node)
+                expect(list3.extract_val).to be_a(Node)
+            end
+    
+            it "se comprueba correctamente si está vacia" do
+                list3 = ListValue.new()
+                expect(list3.empty).to be true
+                expect(list3.insert_val(@etiqueta_)).to be_a(Node)
+                expect(list3.empty).to be false
+                expect(list3.extract_val).to be_a(Node)
+                expect(list3.empty).to be true
+            end
+    
+            it "se comprueba correctamente el tamaño" do
+                list3 = ListValue.new()
+                expect(list3.length).to eq(0)
+                list3.insert_val(@etiqueta_)
+                list3.insert_val(@etiqueta2_)
+                expect(list3.length).to eq(2)
+            end
+    
+            it "se devuelve correctamente el contenido" do
+                list3 = ListValue.new()
+                list3.insert_val(@etiqueta_)
+                list3.insert_val(@etiqueta5_)
+                expect(list3.to_s).to be_a(String)
+            end
+        end
+
         describe "# Clasificación según cantidad de sal" do
             it "Se clasifica correctamente según cantidad de sal " do
                 
