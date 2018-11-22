@@ -47,13 +47,13 @@ describe Etiqueta do
             @paciente6 = Paciente.new("Alicia", 150, 1.80, 46, 0, [84, 83.0], [79, 78.0])
         end
         it "Clasificación de pacientes en tratamiento contra la obesidad" do
-            list = List.new
-            list.insert(@paciente)
-            list.insert(@paciente2)
-            list.insert(@paciente3)
-            list.insert(@paciente4)
-            list.insert(@paciente5)
-            list.insert(@paciente6)
+            list = ListValue.new
+            list.insert_val(@paciente)
+            list.insert_val(@paciente2)
+            list.insert_val(@paciente3)
+            list.insert_val(@paciente4)
+            list.insert_val(@paciente5)
+            list.insert_val(@paciente6)
 
             expect(clasificate_imc(list)).to eq("{ { 22.49, 27.17, 20.7, 26.78 }, { 38.75, 46.3 } }")
         end
