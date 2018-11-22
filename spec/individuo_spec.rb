@@ -19,6 +19,17 @@ describe Etiqueta do
             @paciente = Paciente.new("Francisco", 65, 1.70, 23, 1, [84, 85.0], [71, 70.0])
         end
 
+        it "Expectativas de jerarquía de clases" do
+            expect(@individuo).not_to be_a_kind_of(Paciente)
+            expect(@individuo).to be_a_kind_of(Individuo)
+            expect(@individuo).to be_a_kind_of(Object)
+            expect(@individuo).to be_a_kind_of(BasicObject)
+            expect(@paciente).to be_a_kind_of(Paciente)
+            expect(@paciente).to be_a_kind_of(Individuo)
+            expect(@paciente).to be_a_kind_of(Object)
+            expect(@paciente).to be_a_kind_of(BasicObject)
+        end
+
         it "El objeto Individuo es una instancia de la clase Individuo" do
             expect(@individuo).to be_an_instance_of(Individuo)
         end
