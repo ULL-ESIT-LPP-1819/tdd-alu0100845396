@@ -8,18 +8,12 @@
 
 # encoding: UTF-8
 
-require "spec_helper"
+class Individuo
 
-describe Etiqueta do
+    attr_accessor :nombre
 
-    context "# Expextativas de herencia de la clase Individuo" do
-
-        before :each do
-            @individuo = Individuo.new("Marcos")
-        end
-
-        it "El objeto Individuo es una instancia de la clase Individuo" do
-            expect(@individuo).to be_an_instance_of(Individuo)
-        end
+    def initialize(nombre)
+        @nombre = nombre
     end
+
 end
