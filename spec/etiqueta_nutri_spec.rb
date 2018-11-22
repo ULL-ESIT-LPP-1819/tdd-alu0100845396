@@ -246,22 +246,22 @@ describe Etiqueta do
 
         describe "# Clasificación según cantidad de sal" do
             it "Se clasifica correctamente según cantidad de sal " do
-                
-            etiqueta = Etiqueta.new("Guacamole",17.2,2.4,0,0,3,1.4,0,0,3.2,1.5,5)
-            etiqueta2 = Etiqueta.new("Cereales",7,4,0,0,71,36,0,46,4,0,6)
-            etiqueta3 = Etiqueta.new("Zumo de naranja",0.1,0,0,0,9.5,8.9,0,0,0.6,0.6,1)
-            etiqueta4 = Etiqueta.new("Jamón ibérico",21.9,6.3,0,0,0.5,0.5,0,0,0.1,30,8)
-            etiqueta5 = Etiqueta.new("Jamón",21.9,6.3,0,0,0.5,0.5,0,0,0.1,30,9)
-            etiqueta6 = Etiqueta.new("Salmón",54,6,0,0,4,0,6,7,0,0,10)
+
+            etiqueta_ = Etiqueta.new("Guacamole",17.2,2.4,0,0,3,1.4,0,0,3.2,1.5,5)
+            etiqueta2_ = Etiqueta.new("Cereales",7,4,0,0,71,36,0,46,4,0,6)
+            etiqueta3_ = Etiqueta.new("Zumo de naranja",0.1,0,0,0,9.5,8.9,0,0,0.6,0.6,1)
+            etiqueta4_ = Etiqueta.new("Jamón ibérico",21.9,6.3,0,0,0.5,0.5,0,0,0.1,30,8)
+            etiqueta5_ = Etiqueta.new("Jamón",21.9,6.3,0,0,0.5,0.5,0,0,0.1,30,9)
+            etiqueta6_ = Etiqueta.new("Salmón",54,6,0,0,4,0,6,7,0,0,10)
 
             list3 = ListValue.new()
 
-            list3.insert_val(etiqueta)
-            list3.insert_val(etiqueta2)
-            list3.insert_val(etiqueta3)
-            list3.insert_val(etiqueta4)
-            list3.insert_val(etiqueta5)
-            list3.insert_val(etiqueta6)
+            list3.insert_val(etiqueta_)
+            list3.insert_val(etiqueta2_)
+            list3.insert_val(etiqueta3_)
+            list3.insert_val(etiqueta4_)
+            list3.insert_val(etiqueta5_)
+            list3.insert_val(etiqueta6_)
 
             expect(clasification(list3)).to eq("{{ 5, 6, 1 }, { 8, 9, 10 }}")
             end
