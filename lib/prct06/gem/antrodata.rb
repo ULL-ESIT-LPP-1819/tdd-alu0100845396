@@ -22,7 +22,15 @@ class AntroData           # Declarción de la clase AntroData
 
     def to_s        # Método to_s de visualización de datos
         puts "------ Valores ------"
-        puts "Peso: #{@peso}" , "Talla: #{@talla}" , "Edad: #{@edad}" , "Sexo: #{@sexo}" , "Circ. cadera: #{@cadera}" , "Circ. cintura: #{@cintura}"
+        tmp = "Peso: #{@peso}\n"
+        tmp += "Altura: #{@talla}\n"
+        tmp += "Edad: #{@edad}\n"
+        tmp += "Sexo: #{@sexo}\n"
+        tmp += "Cincurferencia de la cintura: #{@cintura}\n"
+        tmp += "Cincurferencia de la cadera: #{@cadera}\n"
+        tmp += "IMC: #{self.clasification_imc }\n"
+        tmp += "Porcentaje de grasa: #{self.calculate_percentgrasa}\n"
+        tmp += "RCC: #{self.clasification_rcc}\n"
     end
 
     def calculate_imc       # Método de cálculo del IMC del indviduo

@@ -29,4 +29,9 @@ class Paciente < Individuo
         @datos = AntroData.new(peso, talla, edad, sexo, cintura, cadera)
     end
 
+    def to_s
+        tmp = "Nombre #{@nombre}\n"
+        tmp += @datos.to_s
+    end
+
 end
