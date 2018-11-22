@@ -34,6 +34,28 @@ describe Etiqueta do
         end
         it "El objeto Paciente responde al metodo to_s" do
             expect(@paciente).to respond_to('to_s')
-          end
+        end
+    end
+
+    context "# Método de clasificación de Pacientes" do
+        before :each do
+            @paciente = Paciente.new("Juan", 65, 1.70, 23, 1, [84, 85.0], [71, 70.0])
+            @paciente2 = Paciente.new("Fernando", 93, 1.85, 45, 1, [91, 90.0], [82, 83.0])
+            @paciente3 = Paciente.new("Mario", 112, 1.70, 67, 1, [99, 98.0], [90, 89.0])
+            @paciente4 = Paciente.new("Ana", 55, 1.63, 29, 0, [69, 70.0], [61, 60.0])
+            @paciente5 = Paciente.new("María", 82, 1.75, 55, 0, [74, 75.0], [69, 70.0])
+            @paciente6 = Paciente.new("Alicia", 150, 1.80, 46, 0, [84, 83.0], [79, 78.0])
+        end
+        it "Clasificación de pacientes en tratamiento contra la obesidad" do
+            list = List.new
+            list.insert(@paciente)
+            list.insert(@paciente2)
+            list.insert(@paciente3)
+            list.insert(@paciente4)
+            list.insert(@paciente5)
+            list.insert(@paciente6)
+
+            expect(clasificate_imc(list)).to eq("{ { 22.49, 27.17, 20.7, 26.78 }, { 38.75, 46.3 } }")
+        end
     end
 end
