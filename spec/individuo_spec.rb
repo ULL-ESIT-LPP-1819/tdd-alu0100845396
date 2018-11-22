@@ -32,5 +32,8 @@ describe Etiqueta do
         it "El objeto Paciente responde a los metodos nombre y datos" do
             expect(@paciente).to respond_to(:nombre, :datos)
         end
+        it "El objeto Paciente responde al metodo to_s" do
+            expect(@paciente).to respond_to('to_s')
+          end
     end
 end
