@@ -17,3 +17,7 @@ class Individuo
     end
 
 end
+
+class Paciente < Individuo
+
+end
