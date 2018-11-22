@@ -8,6 +8,8 @@
 
 # encoding: UTF-8
 
+require "prct06/gem/antrodata"
+
 class Individuo
 
     attr_accessor :nombre
@@ -21,5 +23,10 @@ end
 class Paciente < Individuo
 
     attr_accessor :datos
+
+    def initialize(nombre, peso, talla, edad, sexo, cintura, cadera)
+        @nombre = nombre
+        @datos = AntroData.new(peso, talla, edad, sexo, cintura, cadera)
+    end
 
 end
