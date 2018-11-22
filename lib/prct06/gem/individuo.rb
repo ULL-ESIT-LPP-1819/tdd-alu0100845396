@@ -20,4 +20,6 @@ end
 
 class Paciente < Individuo
 
+    attr_accessor :datos
+
 end
