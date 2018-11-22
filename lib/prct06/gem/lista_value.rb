@@ -48,8 +48,10 @@ class ListValue
         node = @head
 
         tmp = "{"
-        tmp += " #{node.value.to_s}"
-        node = node.next
+        if !(node.nil?)
+            tmp += " #{node.value.to_s}"
+            node = node.next
+        end
 
         while !(node.nil?)
             tmp += ", #{node.value.to_s}"
@@ -95,4 +97,24 @@ def clasification (lista)
     end
 
   "{#{sal_ir.to_s}, #{sal_mal.to_s}}"
+end
+
+def clasificate_imc (lista)
+    obeso = ListValue.new()
+    no_obeso = ListValue.new()
+    node = lista.extract_val
+
+    while !(node.nil?)
+        if node.value.datos.calculate_imc >= 30.0
+            obeso.insert_val(node.value.datos.calculate_imc)
+        else
+            no_obeso.insert_val(node.value.datos.calculate_imc)
+        end
+
+        node = lista.extract_val
+    end
+        clasificacion = ListValue.new
+        clasificacion.insert_val(no_obeso)
+        clasificacion.insert_val(obeso)
+        clasificacion.to_s
 end
