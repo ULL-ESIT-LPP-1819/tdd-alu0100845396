@@ -11,6 +11,9 @@
 Node = Struct.new(:value, :next, :prev)
 
 class ListValue
+
+    include Enumerable
+
     attr_accessor :head, :tail
 
     def initialize
@@ -76,6 +79,17 @@ class ListValue
 
     def empty
         @head.nil?
+    end
+
+    def each
+        node = Node.new(nil,nil,nil)
+        node = @head
+
+        while !(node.nil?)
+            yield node.value.valor_ener_kcal
+
+        node = node.next
+        end
     end
 end
 

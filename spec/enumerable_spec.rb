@@ -17,25 +17,30 @@ describe Etiqueta do
         @etiqueta3 = Etiqueta.new("Zumo de naranja",0.1,0,0,0,9.5,8.9,0,0,0.6,0.6,1)
         @etiqueta4 = Etiqueta.new("Jamón ibérico",21.9,6.3,0,0,0.5,0.5,0,0,0.1,30,8)
         @etiqueta5 = Etiqueta.new("Jamón",21.9,6.3,0,0,0.5,0.5,0,0,0.1,30,9)
-        @etiqueta6 = Etiqueta.new("Salmón",54,6,0,0,4,0,6,7,0,0,10)
 
-        @lista = List.new
+        @lista = ListValue.new
+
         @lista.insert_val(@etiqueta)
+        @lista.insert_val(@etiqueta2)
+        @lista.insert_val(@etiqueta3)
+        @lista.insert_val(@etiqueta4)
+        @lista.insert_val(@etiqueta5)
+
     end
 
     it "Comprobación del metodo collect" do
-        expect(@lista.collect{1}).to eq([1,2,3,4,5,6])
+        expect(@lista.collect{1}).to eq([1,1,1,1,1])
     end
     it "Comprobación del metodo select" do
-        expect(@lista.select{@etiqueta2}).to eq([3,71,1,0,30,54])
+        expect(@lista.select{@etiqueta2}).to eq([209.2, 575.0, 48.5, 367.3, 373.3])
     end
     it "Comprobación del metodo max" do
-        expect(@lista.max).to eq(71)
+        expect(@lista.max).to eq(575.0)
     end
     it "Comprobación del metodo min" do
-        expect(@lista.min).to eq(0)
+        expect(@lista.min).to eq(48.5)
     end
     it "Comprobación del metodo sort" do
-        expect(@lista.sort).to eq([0,1,3,30,54,71])
+        expect(@lista.sort).to eq([48.5, 209.2, 367.3, 373.3, 575.0])
     end
 end
