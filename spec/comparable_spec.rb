@@ -17,21 +17,21 @@ describe Etiqueta do
     end
 
     it "Comprobar que etiqueta es menor que etiqueta2" do
-        expect(@etiqueta < @etiqueta2).to be true
+        expect(@etiqueta < @etiqueta2).to eq(true)
     end
     it "Comprobar que etiqueta es menor o igual que etiqueta2" do
-        expect(@etiqueta <= @etiqueta2).to be true
+        expect(@etiqueta <= @etiqueta2).to eq(true)
     end
     it "Comprobar que etiqueta es igual a etiqueta2" do
-        expect(@etiqueta == @etiqueta2).to be true
+        expect(@etiqueta == @etiqueta2).to eq(false)
     end
     it "Comprobar que etiqueta es igual que etiqueta2" do
-        expect(@etiqueta > @etiqueta2).to be true
+        expect(@etiqueta > @etiqueta2).to eq(false)
     end
     it "Comprobar que etiqueta es mayor o igual que etiqueta2" do
-        expect(@etiqueta >= @etiqueta2).to be true
+        expect(@etiqueta >= @etiqueta2).to eq(false)
     end
     it "Comprobar que etiqueta está entre etiqueta2" do
-        expect(@etiqueta.between?(@etiqueta2,@etiqueta2)).to be true
+        expect(@etiqueta.between?(@etiqueta2,@etiqueta2)).to eq(false)
     end
 end

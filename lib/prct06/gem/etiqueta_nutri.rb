@@ -10,6 +10,8 @@
 
 class Etiqueta              # Clase Etiqueta
 
+    # Módulo Comparable
+    include Comparable
     # Constructor de la clase Etiqueta
     attr_reader :nombre, :grasas, :grasas_sat, :grasas_mono, :grasas_poli, :hidratos, :azucares, :polialcoholes, :almidon, :fibra, :proteinas, :sal
 
@@ -138,5 +140,9 @@ class Etiqueta              # Clase Etiqueta
 
     def to_s            # Método to_s de visualización de datos
         puts "(Nombre de etiqueta: #{@nombre}, Grasas: #{@grasas}, Grasas saturadas: #{@grasas_sat}, Grasas monosaturadas: #{@grasas_mono}, Grasas polisaturadas: #{@grasas_poli}, Hidratos: #{@hidratos}, Azúcares: #{@azucares}, Polialcoholes: #{@polialcoholes}, Almidón: #{@almidon}, Fibra: #{@fibra}, Proteinas: #{@proteinas}, Sal: #{@sal})"
+    end
+
+    def <=> (other)
+        valor_ener_kcal <=> other.valor_ener_kcal
     end
 end
