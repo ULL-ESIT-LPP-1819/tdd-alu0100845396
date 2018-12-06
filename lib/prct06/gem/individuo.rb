@@ -12,6 +12,8 @@ require "prct06/gem/antrodata"
 
 class Individuo
 
+    include Comparable
+
     attr_accessor :nombre
 
     def initialize(nombre)
@@ -33,5 +35,9 @@ class Paciente < Individuo
         tmp = "Nombre #{@nombre}\n"
         tmp += @datos.to_s
     end
+
+    def <=> (other)
+        datos.calculate_imc  <=> other.datos.calculate_imc 
+      end
 
 end
