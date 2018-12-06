@@ -86,7 +86,7 @@ class ListValue
         node = @head
 
         while !(node.nil?)
-            yield node.value.valor_ener_kcal
+            yield node.value.enumerable
 
         node = node.next
         end

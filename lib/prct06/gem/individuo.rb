@@ -38,6 +38,10 @@ class Paciente < Individuo
 
     def <=> (other)
         datos.calculate_imc  <=> other.datos.calculate_imc 
-      end
+    end
+
+    def enumerable
+        datos.calculate_imc
+    end
 
 end

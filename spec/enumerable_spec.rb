@@ -52,29 +52,29 @@ describe Etiqueta do
             @paciente4 = Paciente.new("Ana", 55, 1.63, 29, 0, [69, 70.0], [61, 60.0])
             @paciente5 = Paciente.new("María", 82, 1.75, 55, 0, [74, 75.0], [69, 70.0])
 
-            @list2 = ListValue.new
+            @lista = ListValue.new
 
-            @list2.insert_val(@paciente)
-            @list2.insert_val(@paciente2)
-            @list2.insert_val(@paciente3)
-            @list2.insert_val(@paciente4)
-            @list2.insert_val(@paciente5)
+            @lista.insert_val(@paciente)
+            @lista.insert_val(@paciente2)
+            @lista.insert_val(@paciente3)
+            @lista.insert_val(@paciente4)
+            @lista.insert_val(@paciente5)
         end
 
         it "Comprobación del metodo collect" do
-            expect(@lista2.collect{1}).to eq([1,1,1,1,1])
+            expect(@lista.collect{0}).to eq([0,0,0,0,0])
         end
         it "Comprobación del metodo select" do
-            expect(@lista2.select{@persona1}).to eq([0,12,43,2,78])
+            expect(@lista.select{@paciente2}).to eq([22.49,27.17,38.75,20.7,26.78])
         end
         it "Comprobación del metodo max" do
-            expect(@lista2.max).to eq(78)
+            expect(@lista.max).to eq(38.75)
         end
         it "Comprobación del metodo min" do
-            expect(@lista2.min).to eq(0)
+            expect(@lista.min).to eq(20.7)
         end
         it "Comprobación del metodo sort" do
-            expect(@lista2.sort).to eq([0,2,12,43,78])
+            expect(@lista.sort).to eq([20.7, 22.49, 26.78, 27.17, 38.75])
         end
     end
 end

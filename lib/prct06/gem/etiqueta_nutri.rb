@@ -145,4 +145,8 @@ class Etiqueta              # Clase Etiqueta
     def <=> (other)
         valor_ener_kcal <=> other.valor_ener_kcal
     end
+
+    def enumerable
+        valor_ener_kcal
+    end
 end
