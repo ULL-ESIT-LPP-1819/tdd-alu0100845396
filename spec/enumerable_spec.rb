@@ -43,4 +43,38 @@ describe Etiqueta do
     it "Comprobación del metodo sort" do
         expect(@lista.sort).to eq([48.5, 209.2, 367.3, 373.3, 575.0])
     end
+
+    context "# Lista de Pacientes con Enumerable" do
+        before :each do
+            @paciente = Paciente.new("Juan", 65, 1.70, 23, 1, [84, 85.0], [71, 70.0])
+            @paciente2 = Paciente.new("Fernando", 93, 1.85, 45, 1, [91, 90.0], [82, 83.0])
+            @paciente3 = Paciente.new("Mario", 112, 1.70, 67, 1, [99, 98.0], [90, 89.0])
+            @paciente4 = Paciente.new("Ana", 55, 1.63, 29, 0, [69, 70.0], [61, 60.0])
+            @paciente5 = Paciente.new("María", 82, 1.75, 55, 0, [74, 75.0], [69, 70.0])
+
+            @list2 = ListValue.new
+
+            @list2.insert_val(@paciente)
+            @list2.insert_val(@paciente2)
+            @list2.insert_val(@paciente3)
+            @list2.insert_val(@paciente4)
+            @list2.insert_val(@paciente5)
+        end
+
+        it "Comprobación del metodo collect" do
+            expect(@lista2.collect{1}).to eq([1,1,1,1,1])
+        end
+        it "Comprobación del metodo select" do
+            expect(@lista2.select{@persona1}).to eq([0,12,43,2,78])
+        end
+        it "Comprobación del metodo max" do
+            expect(@lista2.max).to eq(78)
+        end
+        it "Comprobación del metodo min" do
+            expect(@lista2.min).to eq(0)
+        end
+        it "Comprobación del metodo sort" do
+            expect(@lista2.sort).to eq([0,2,12,43,78])
+        end
+    end
 end
