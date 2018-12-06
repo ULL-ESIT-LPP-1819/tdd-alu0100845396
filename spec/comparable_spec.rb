@@ -34,4 +34,29 @@ describe Etiqueta do
     it "Comprobar que etiqueta está entre etiqueta2" do
         expect(@etiqueta.between?(@etiqueta2,@etiqueta2)).to eq(false)
     end
+
+    context "#Comparable para Paciente" do
+        before :each do
+            @paciente = Paciente.new("Juan", 65, 1.70, 23, 1, [84, 85.0], [71, 70.0])
+            @paciente2 = Paciente.new("Fernando", 93, 1.85, 45, 1, [91, 90.0], [82, 83.0])
+        end
+        it "Comprobación de que paciente es menor que paciente2" do
+            expect(@paciente < @paciente2).to eq(true)
+        end
+        it "Comprobación de que paciente es menor o igual que paciente2" do
+            expect(@paciente <= @paciente2).to eq(true)
+        end
+        it "Comprobación de que paciente es igual que paciente2" do
+            expect(@paciente == @paciente2).to eq(false)
+        end
+        it "Comprobación de que paciente es mayor que paciente2" do
+            expect(@paciente > @paciente2).to eq(false)
+        end
+        it "Comprobación de que paciente es mayor o igual que paciente2" do
+            expect(@paciente >= @paciente2).to eq(false)
+        end
+        it "Comprobación de que paciente está entre paciente2" do
+            expect(@paciente.between?(@paciente2,@paciente2)).to eq(false)
+        end
+    end
 end
