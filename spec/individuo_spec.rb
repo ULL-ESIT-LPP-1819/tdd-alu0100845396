@@ -17,13 +17,19 @@ describe Etiqueta do
         before :each do
             @individuo = Individuo.new("Marcos")
             @paciente = Paciente.new("Francisco", 65, 1.70, 23, 1, [84, 85.0], [71, 70.0])
+
+            @list1 = ListValue.new()
         end
 
-        it "Expectativas de jerarquía de clases" do
+        it "Expectativas de jerarquía de clases y herencia" do
+            expect(@list1).to be_a_kind_of(ListValue)
+            expect(@list1).not_to be_a_kind_of(Paciente)
+
             expect(@individuo).not_to be_a_kind_of(Paciente)
             expect(@individuo).to be_a_kind_of(Individuo)
             expect(@individuo).to be_a_kind_of(Object)
             expect(@individuo).to be_a_kind_of(BasicObject)
+
             expect(@paciente).to be_a_kind_of(Paciente)
             expect(@paciente).to be_a_kind_of(Individuo)
             expect(@paciente).to be_a_kind_of(Object)

@@ -7,11 +7,14 @@
 
 # encoding: UTF-8
 
-class AntroData           # Declarción de la clase AntroData
+# Declaración de la clase AntroData
+
+class AntroData          
 
     attr_reader :peso, :talla, :edad, :sexo, :cadera, :cintura
 
-    def initialize(peso, talla, edad, sexo, cadera, cintura)          # Constructor de la clase AntroData
+    # Constructor de la clase AntroData
+    def initialize(peso, talla, edad, sexo, cadera, cintura)          
         @peso = peso
         @talla = talla
         @edad = edad
@@ -20,7 +23,8 @@ class AntroData           # Declarción de la clase AntroData
         @cintura = cintura
     end
 
-    def to_s        # Método to_s de visualización de datos
+     # Método to_s de visualización de datos
+    def to_s       
         puts "------ Valores ------"
         tmp = "Peso: #{@peso}\n"
         tmp += "Altura: #{@talla}\n"
@@ -33,22 +37,26 @@ class AntroData           # Declarción de la clase AntroData
         tmp += "RCC: #{self.clasification_rcc}\n"
     end
 
-    def calculate_imc       # Método de cálculo del IMC del indviduo
+    # Método de cálculo del IMC del indviduo
+    def calculate_imc       
         @imc = (@peso / (@talla * @talla)).round(2)
     end
 
-    def calculate_percentgrasa      # Método de cálculo del porcentaje de grasa de individuo
+    # Método de cálculo del porcentaje de grasa de individuo
+    def calculate_percentgrasa      
         grasa = (1.2 * @imc + 0.23 * @edad - 10.8 * @sexo - 5.4).round(3)
     end
 
-    def calculate_rcc               # Método de cálculo de RCC del individuo
+    # Método de cálculo de RCC del individuo
+    def calculate_rcc               
         cintura_med = ((@cintura[0] + @cintura[1]) / 2)
         cadera_med = ((@cadera[0] + @cadera[1]) / 2)
 
         @rcc = (cintura_med / cadera_med).round(2)
     end
 
-    def clasification_imc       # Método de clasificación de IMC
+    # Método de clasificación de IMC
+    def clasification_imc       
         case @imc
         when 0 .. 18.5
             "Bajo peso"
@@ -65,7 +73,8 @@ class AntroData           # Declarción de la clase AntroData
         end
     end
 
-    def clasification_rcc    # Método de clasficación de riesgo según RCC hombre
+    # Método de clasficación de riesgo según RCC hombre
+    def clasification_rcc    
         if @sexo == 1
             case @rcc
             when 0.83 .. 0.88

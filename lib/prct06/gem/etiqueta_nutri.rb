@@ -10,6 +10,8 @@
 
 class Etiqueta              # Clase Etiqueta
 
+    # Módulo Comparable
+    include Comparable
     # Constructor de la clase Etiqueta
     attr_reader :nombre, :grasas, :grasas_sat, :grasas_mono, :grasas_poli, :hidratos, :azucares, :polialcoholes, :almidon, :fibra, :proteinas, :sal
 
@@ -28,115 +30,153 @@ class Etiqueta              # Clase Etiqueta
         @sal = sal
     end
 
-    def grasas_kj               # Método para obtener la cantidad de grasas en Kj
+    # Método para obtener la cantidad de grasas en Kj
+    def grasas_kj               
         (@grasas * 37).round(2)
     end
 
-    def grasas_mono_kj          # Método para obtener la cantidad de grasas monosaturadas en Kj
+    # Método para obtener la cantidad de grasas monosaturadas en Kj
+    def grasas_mono_kj          
         (@grasas_mono * 37).round(2)
     end
 
-    def grasas_poli_kj          # Método para obtener la cantidad de grasas polisaturadas en Kj
+    # Método para obtener la cantidad de grasas polisaturadas en Kj
+    def grasas_poli_kj          
         (@grasas_poli * 37).round(2)
     end
 
-    def hidratos_kj             # Método para obtener la cantidad de hidratos de carbono en Kj
+    # Método para obtener la cantidad de hidratos de carbono en Kj
+    def hidratos_kj             
         (@hidratos * 17).round(2)
     end
 
-    def polialcohol_kj          # Método para obtener la cantidad de hidratos de carbono en Kj
+    # Método para obtener la cantidad de hidratos de carbono en Kj
+    def polialcohol_kj          
         (@polialcoholes * 10).round(2)
     end
 
-    def almidon_kj              # Método para obtener la cantidad de almidon en Kj
+    # Método para obtener la cantidad de almidon en Kj
+    def almidon_kj              
         (@almidon * 17).round(2)
     end
 
-    def fibra_kj                # Método para obtener la cantidad de fibra en Kj
+    # Método para obtener la cantidad de fibra en Kj
+    def fibra_kj                
         (@fibra * 8).round(2)
     end
 
-    def proteinas_kj            # Método para obtener la cantidad de proteínas en Kj
+    # Método para obtener la cantidad de proteínas en Kj
+    def proteinas_kj            
         (@proteinas * 17).round(2)
     end
 
-    def sal_kj                  # Método para obtener la cantidad de sal en Kj
+    # Método para obtener la cantidad de sal en Kj
+    def sal_kj                  
         (@sal * 25).round(2)
     end
 
-    def valor_ener_kj           # Método para obtener el valor energético en Kj
+    # Método para obtener el valor energético en Kj
+    def valor_ener_kj           
        val_ener = (grasas_kj + grasas_mono_kj + grasas_poli_kj + hidratos_kj + polialcohol_kj + almidon_kj + fibra_kj + proteinas_kj + sal_kj).round(2)
     end
 
-    def grasas_kcal             # Método para obtener grasas en Kcal
+    # Método para obtener grasas en Kcal
+    def grasas_kcal             
         (@grasas * 9).round(2)
     end
 
-    def grasas_mono_kcal        # Método para obtener grasas monosaturadas en Kcal
+    # Método para obtener grasas monosaturadas en Kcal
+    def grasas_mono_kcal        
         (@grasas_mono * 9).round(2)
     end
 
-    def grasas_poli_kcal        # Método para obtener grasas polisaturadas en Kcal
+    # Método para obtener grasas polisaturadas en Kcal
+    def grasas_poli_kcal        
         (@grasas_poli * 9).round(2)
     end
 
-    def hidratos_kcal           # Método para obtener hidratos en Kcal
+    # Método para obtener hidratos en Kcal
+    def hidratos_kcal           
         (@hidratos * 4).round(2)
     end
 
-    def polialcohol_kcal        # Método para obtener polialcoholes en Kcal
+    # Método para obtener polialcoholes en Kcal
+    def polialcohol_kcal        
         (@polialcoholes * 2.4).round(2)
     end
 
-    def almidon_kcal            # Método para obtener almidón en Kcal
+    # Método para obtener almidón en Kcal
+    def almidon_kcal            
         (@almidon * 4).round(2)
     end
 
-    def fibra_kcal              # Método para obtener fibra en Kcal
+    # Método para obtener fibra en Kcal
+    def fibra_kcal              
         (@fibra * 2).round(2)
     end
 
-    def proteinas_kcal          # Método para obtener proteínas en Kcal
+    # Método para obtener proteínas en Kcal
+    def proteinas_kcal          
         (@proteinas * 4).round(2)
     end
 
-    def sal_kcal                # Método para obtener sal en Kcal
+    # Método para obtener sal en Kcal
+    def sal_kcal                
         (@sal * 6).round(2)
     end
 
-    def valor_ener_kcal         # Método para obtener valor enerético en Kcal
+    # Método para obtener valor enerético en Kcal
+    def valor_ener_kcal         
         (grasas_kcal + grasas_mono_kcal + grasas_poli_kcal+ hidratos_kcal + polialcohol_kcal + almidon_kcal + fibra_kcal + proteinas_kcal + sal_kcal).round(2)
     end
 
-    def valor_ener_ir           # Método para obtener %IR valor energético
+    # Método para obtener %IR valor energético
+    def valor_ener_ir           
         ((valor_ener_kj / 8400) * 100).round(2) 
     end
 
-    def grasas_ir               # Método para obtener %IR grasas
+    # Método para obtener %IR grasas
+    def grasas_ir               
         ((@grasas / 70) * 100).round(2)
     end
 
-    def saturadas_ir            # Método para obtener %IR grasas saturadas
+    # Método para obtener %IR grasas saturadas
+    def saturadas_ir            
          ((@grasas_sat / 20) * 100).round(2)
     end 
     
-    def hidratos_ir             # Método para obtener %IR hidratos
+    # Método para obtener %IR hidratos
+    def hidratos_ir             
          ((@hidratos / 260) * 100).round(2)
     end
 
-    def azucares_ir             # Método para obtener %IR azúcares
+    # Método para obtener %IR azúcares
+    def azucares_ir             
          ((@azucares / 90) * 100).round(2)
     end
 
-    def proteinas_ir            # Método para obtener %IR proteínas
+    # Método para obtener %IR proteínas
+    def proteinas_ir            
          ((@proteinas / 50) * 100).round(2)
     end
 
-    def sal_ir                  # Método para obtener %IR sales
+    # Método para obtener %IR sales
+    def sal_ir                  
          ((@sal / 6) * 100).round(2)
     end
 
-    def to_s            # Método to_s de visualización de datos
+    # Método to_s de visualización de datos
+    def to_s            
         puts "(Nombre de etiqueta: #{@nombre}, Grasas: #{@grasas}, Grasas saturadas: #{@grasas_sat}, Grasas monosaturadas: #{@grasas_mono}, Grasas polisaturadas: #{@grasas_poli}, Hidratos: #{@hidratos}, Azúcares: #{@azucares}, Polialcoholes: #{@polialcoholes}, Almidón: #{@almidon}, Fibra: #{@fibra}, Proteinas: #{@proteinas}, Sal: #{@sal})"
+    end
+
+    # Método <=> del mixin Comparable
+    def <=> (other)
+        valor_ener_kcal <=> other.valor_ener_kcal
+    end
+
+    # Método enumerable del mixin Enumerable
+    def enumerable
+        valor_ener_kcal
     end
 end
