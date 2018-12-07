@@ -1,4 +1,4 @@
-# Práctica 8: Programación Orientada a Objetos (POO)
+# Práctica 9: Programación Orientada a Objetos - Módulos(POO)
 
 *   Universidad de La Laguna - ULL
 *   Asignatura: Lenguajes y Paradigmas de Programación
