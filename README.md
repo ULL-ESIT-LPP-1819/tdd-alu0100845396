@@ -1,4 +1,4 @@
-# Práctica 9: Programación Orientada a Objetos - Módulos(POO)
+# Práctica 10: Programación Funcional
 
 *   Universidad de La Laguna - ULL
 *   Asignatura: Lenguajes y Paradigmas de Programación
