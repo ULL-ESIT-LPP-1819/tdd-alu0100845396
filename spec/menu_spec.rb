@@ -87,5 +87,13 @@ describe Etiqueta do
             expect(@paciente5.gasto_actividad_fisica).to eq(177.33)
             expect(@paciente6.gasto_actividad_fisica).to eq(268.08)
         end
+        it "Existe un método para calcular el GET" do
+            expect(@paciente.gasto_energetico_total).to eq(1955.05)
+            expect(@paciente2.gasto_energetico_total).to eq(3060.66)
+            expect(@paciente3.gasto_energetico_total).to eq(3038.1)
+            expect(@paciente4.gasto_energetico_total).to eq(1729.97)
+            expect(@paciente5.gasto_energetico_total).to eq(1802.86)
+            expect(@paciente6.gasto_energetico_total).to eq(2725.48)
+        end
     end
 end
