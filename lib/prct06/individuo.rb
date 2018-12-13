@@ -31,9 +31,9 @@ class Paciente < Individuo
     attr_accessor :datos
 
     # Método initialize de la clase Paciente
-    def initialize(nombre, peso, talla, edad, sexo, cintura, cadera)
+    def initialize(nombre, peso, talla, edad, sexo, cintura, cadera, factor)
         @nombre = nombre
-        @datos = AntroData.new(peso, talla, edad, sexo, cintura, cadera)
+        @datos = AntroData.new(peso, talla, edad, sexo, cintura, cadera, factor)
     end
 
     # Método to_s que muestra los datos y el nombre del paciente
@@ -69,5 +69,10 @@ class Paciente < Individuo
     # Método para calcular el ET
     def efecto_termogeno
         (self.gasto_energetico_basal * 0.10).round(2)
+    end
+
+    #Método para calcular el GAF
+    def gasto_actividad_fisica
+        (self.gasto_energetico_basal * @datos.factor).round(2)
     end
 end

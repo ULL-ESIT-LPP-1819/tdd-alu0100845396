@@ -16,7 +16,7 @@ describe Etiqueta do
 
         before :each do
             @individuo = Individuo.new("Marcos")
-            @paciente = Paciente.new("Francisco", 65, 1.70, 23, 1, [84, 85.0], [71, 70.0])
+            @paciente = Paciente.new("Francisco", 65, 1.70, 23, 1, [84, 85.0], [71, 70.0], 0.12)
 
             @list1 = ListValue.new()
         end
@@ -56,12 +56,12 @@ describe Etiqueta do
 
     context "# Método de clasificación de Pacientes" do
         before :each do
-            @paciente = Paciente.new("Juan", 65, 1.70, 23, 1, [84, 85.0], [71, 70.0])
-            @paciente2 = Paciente.new("Fernando", 93, 1.85, 45, 1, [91, 90.0], [82, 83.0])
-            @paciente3 = Paciente.new("Mario", 112, 1.70, 67, 1, [99, 98.0], [90, 89.0])
-            @paciente4 = Paciente.new("Ana", 55, 1.63, 29, 0, [69, 70.0], [61, 60.0])
-            @paciente5 = Paciente.new("María", 82, 1.75, 55, 0, [74, 75.0], [69, 70.0])
-            @paciente6 = Paciente.new("Alicia", 150, 1.80, 46, 0, [84, 83.0], [79, 78.0])
+            @paciente = Paciente.new("Juan", 65, 1.70, 23, 1, [84, 85.0], [71, 70.0], 0.12)
+            @paciente2 = Paciente.new("Fernando", 93, 1.85, 45, 1, [91, 90.0], [82, 83.0], 0.54)
+            @paciente3 = Paciente.new("Mario", 112, 1.70, 67, 1, [99, 98.0], [90, 89.0], 0.54)
+            @paciente4 = Paciente.new("Ana", 55, 1.63, 29, 0, [69, 70.0], [61, 60.0], 0.27)
+            @paciente5 = Paciente.new("María", 82, 1.75, 55, 0, [74, 75.0], [69, 70.0], 0.12)
+            @paciente6 = Paciente.new("Alicia", 150, 1.80, 46, 0, [84, 83.0], [79, 78.0], 0.12)
         end
         it "Clasificación de pacientes en tratamiento contra la obesidad" do
             list = ListValue.new

@@ -11,16 +11,17 @@
 
 class AntroData          
 
-    attr_reader :peso, :talla, :edad, :sexo, :cadera, :cintura
+    attr_reader :peso, :talla, :edad, :sexo, :cadera, :cintura, :factor
 
     # Constructor de la clase AntroData
-    def initialize(peso, talla, edad, sexo, cadera, cintura)          
+    def initialize(peso, talla, edad, sexo, cadera, cintura, factor)          
         @peso = peso
         @talla = talla
         @edad = edad
         @sexo = sexo
         @cadera = cadera
         @cintura = cintura
+        @factor = factor
     end
 
      # Método to_s de visualización de datos
