@@ -63,5 +63,13 @@ describe Etiqueta do
             expect(@paciente5.peso_teorico_ideal).to eq(68.75)
             expect(@paciente6.peso_teorico_ideal).to eq(72.5)
         end
+        it "Existe un método para calcular el GEB" do
+            expect(@paciente.gasto_energetico_basal).to eq(1602.5)
+            expect(@paciente2.gasto_energetico_basal).to eq(1866.25)
+            expect(@paciente3.gasto_energetico_basal).to eq(1852.5)
+            expect(@paciente4.gasto_energetico_basal).to eq(1262.75)
+            expect(@paciente5.gasto_energetico_basal).to eq(1477.75)
+            expect(@paciente6.gasto_energetico_basal).to eq(2234)
+        end
     end
 end
