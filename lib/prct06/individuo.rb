@@ -75,4 +75,9 @@ class Paciente < Individuo
     def gasto_actividad_fisica
         (self.gasto_energetico_basal * @datos.factor).round(2)
     end
+
+    # Método para calcular el GET
+    def gasto_energetico_total
+        (self.gasto_energetico_basal + self.efecto_termogeno + self.gasto_actividad_fisica).round(2)
+    end
 end

@@ -33,25 +33,11 @@ describe Etiqueta do
             @etiqueta5 = Etiqueta.new("Jamón", 21.9, 6.3, 0, 0, 0.5, 0.5, 0, 0, 0.1, 30, 10)
             @etiqueta6 = Etiqueta.new("Salmón", 54, 6, 0, 0, 4, 0, 6, 7, 0, 0, 8)
 
-            @menu = ListValue.new
-            @menu.insert_val(@etiqueta)
-            @menu.insert_val(@etiqueta4)
-
-            @menu2 = ListValue.new
-            @menu2.insert_val(@etiqueta2)
-            @menu2.insert_val(@etiqueta6)
-
-            @menu3 = ListValue.new
-            @menu3.insert_val(@etiqueta3)
-            @menu3.insert_val(@etiqueta)
-
-            @menu4 = ListValue.new
-            @menu4.insert_val(@etiqueta4)
-            @menu4.insert_val(@etiqueta2)
-
-            @menu5 = ListValue.new
-            @menu5.insert_val(@etiqueta5)
-            @menu5.insert_val(@etiqueta4)
+            @menu1 = [@etiqueta2, @etiqueta4]
+            @menu2 = [@etiqueta3, @etiqueta5]
+            @menu3 = [@etiqueta4, @etiqueta2]
+            @menu4 = [@etiqueta5, @etiqueta6]
+            @menu5 = [@etiqueta6, @etiqueta3]
             
         end
         
@@ -94,6 +80,42 @@ describe Etiqueta do
             expect(@paciente4.gasto_energetico_total).to eq(1729.97)
             expect(@paciente5.gasto_energetico_total).to eq(1802.86)
             expect(@paciente6.gasto_energetico_total).to eq(2725.48)
+        end
+
+        it "Menú dietético 1 para el paciente 4" do
+            calorias_menu = @menu1.map{ |i| i.valor_ener_kj}
+            total_calorias = calorias_menu.reduce(:+)
+            gasto_energetico = @paciente4.gasto_energetico_total
+            gasto_energetico = gasto_energetico * 0.10
+            expect(total_calorias >= gasto_energetico).to eq(true)
+        end
+        it "Menú dietético 2 para el paciente 2" do
+            calorias_menu = @menu2.map{ |i| i.valor_ener_kj}
+            total_calorias = calorias_menu.reduce(:+)
+            gasto_energetico = @paciente2.gasto_energetico_total
+            gasto_energetico = gasto_energetico * 0.10
+            expect(total_calorias >= gasto_energetico).to eq(true)
+        end
+        it "Menú dietético 3 para el paciente 5" do
+            calorias_menu = @menu3.collect{ |x| x.valor_ener_kj}
+            total_calorias = calorias_menu.reduce(:+)
+            gasto_energetico = @paciente5.gasto_energetico_total
+            gasto_energetico = gasto_energetico * 0.10
+            expect(total_calorias >= gasto_energetico).to eq(true)
+        end
+        it "Menú dietético 4 para el paciente 1" do
+            calorias_menu = @menu4.collect{ |x| x.valor_ener_kj}
+            total_calorias = calorias_menu.reduce(:+)
+            gasto_energetico = @paciente.gasto_energetico_total
+            gasto_energetico = gasto_energetico * 0.10
+            expect(total_calorias >= gasto_energetico).to eq(true)
+        end
+        it "Menú dietético 5 para el paciente 3" do
+            calorias_menu = @menu5.collect{ |x| x.valor_ener_kj}
+            total_calorias = calorias_menu.reduce(:+)
+            gasto_energetico = @paciente3.gasto_energetico_total
+            gasto_energetico = gasto_energetico * 0.10
+            expect(total_calorias >= gasto_energetico).to eq(true)
         end
     end
 end
