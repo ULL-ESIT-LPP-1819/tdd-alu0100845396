@@ -65,4 +65,9 @@ class Paciente < Individuo
             ((10 * @datos.peso) + (6.25 * @datos.talla * 100) - (5 * @datos.edad) + 5).round(2)
         end
     end
+
+    # Método para calcular el ET
+    def efecto_termogeno
+        (self.gasto_energetico_basal * 0.10).round(2)
+    end
 end

@@ -79,5 +79,13 @@ describe Etiqueta do
             expect(@paciente5.efecto_termogeno).to eq(147.78)
             expect(@paciente6.efecto_termogeno).to eq(223.4)
         end
+        it "Existe un método para calcular el GAF" do
+            expect(@paciente.gasto_actividad_fisica).to eq(192.3)
+            expect(@paciente2.gasto_actividad_fisica).to eq(1007.78)
+            expect(@paciente3.gasto_actividad_fisica).to eq(1000.35)
+            expect(@paciente4.gasto_actividad_fisica).to eq(340.94)
+            expect(@paciente5.gasto_actividad_fisica).to eq(177.33)
+            expect(@paciente6.gasto_actividad_fisica).to eq(0)
+        end
     end
 end
