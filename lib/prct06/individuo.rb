@@ -52,4 +52,8 @@ class Paciente < Individuo
         datos.calculate_imc
     end
 
+    # Método para calcular el PTI
+    def peso_teorico_ideal
+        ((@datos.talla - 1.50) * 100 * 0.75 + 50).round(2)
+    end
 end

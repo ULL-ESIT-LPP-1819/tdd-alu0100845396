@@ -56,12 +56,12 @@ describe Etiqueta do
         end
         
         it "Existe un método para calcular el PTI" do
-            expect(@paciente.peso_teorico_ideal).to eq()
-            expect(@paciente2.peso_teorico_ideal).to eq()
-            expect(@paciente3.peso_teorico_ideal).to eq()
-            expect(@paciente4.peso_teorico_ideal).to eq()
-            expect(@paciente5.peso_teorico_ideal).to eq()
-            expect(@paciente6.peso_teorico_ideal).to eq()
+            expect(@paciente.peso_teorico_ideal).to eq(65.0)
+            expect(@paciente2.peso_teorico_ideal).to eq(76.25)
+            expect(@paciente3.peso_teorico_ideal).to eq(65.0)
+            expect(@paciente4.peso_teorico_ideal).to eq(59.75)
+            expect(@paciente5.peso_teorico_ideal).to eq(68.75)
+            expect(@paciente6.peso_teorico_ideal).to eq(72.5)
         end
     end
 end
