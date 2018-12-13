@@ -8,7 +8,7 @@
 
 # encoding: UTF-8
 
-require "prct06/gem/antrodata"
+require "prct06/antrodata"
 
 # Declaración de la clase Individuo
 class Individuo

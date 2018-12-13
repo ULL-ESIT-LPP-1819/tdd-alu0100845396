@@ -1,11 +1,11 @@
 
 lib = File.expand_path("../lib", __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require "prct06/gem/version"
+require "prct06/version"
 
 Gem::Specification.new do |spec|
-  spec.name          = "prct06-gem"
-  spec.version       = Prct06::Gem::VERSION
+  spec.name          = "prct06"
+  spec.version       = Prct06::VERSION
   spec.authors       = ["Omar Mendo"]
   spec.email         = ["alu0100845396@ull.edu.es"]
 

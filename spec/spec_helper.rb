@@ -1,8 +1,8 @@
 require "bundler/setup"
-require "prct06/gem/etiqueta_nutri"
-require "prct06/gem/lista"
-require "prct06/gem/lista_value"
-require "prct06/gem/individuo"
+require "prct06/etiqueta_nutri"
+require "prct06/lista"
+require "prct06/lista_value"
+require "prct06/individuo"
 
 RSpec.configure do |config|
 
