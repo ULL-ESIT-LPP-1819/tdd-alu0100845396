@@ -56,4 +56,13 @@ class Paciente < Individuo
     def peso_teorico_ideal
         ((@datos.talla - 1.50) * 100 * 0.75 + 50).round(2)
     end
+
+    # Método para calcular el GEB
+    def gasto_energetico_basal
+        if (@datos.sexo == 0)
+            ((10 * @datos.peso) + (6.25 * @datos.talla * 100) - (5 * @datos.edad) - 161).round(2)
+        elsif(@datos.sexo == 1)
+            ((10 * @datos.peso) + (6.25 * @datos.talla * 100) - (5 * @datos.edad) + 5).round(2)
+        end
+    end
 end
