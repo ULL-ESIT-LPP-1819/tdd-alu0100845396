@@ -71,5 +71,13 @@ describe Etiqueta do
             expect(@paciente5.gasto_energetico_basal).to eq(1477.75)
             expect(@paciente6.gasto_energetico_basal).to eq(2234)
         end
+        it "Existe un método para calcular el ET" do
+            expect(@paciente.efecto_termogeno).to eq(160.25)
+            expect(@paciente2.efecto_termogeno).to eq(186.63)
+            expect(@paciente3.efecto_termogeno).to eq(185.25)
+            expect(@paciente4.efecto_termogeno).to eq(126.28)
+            expect(@paciente5.efecto_termogeno).to eq(147.78)
+            expect(@paciente6.efecto_termogeno).to eq(223.4)
+        end
     end
 end
