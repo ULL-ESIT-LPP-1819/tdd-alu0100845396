@@ -96,7 +96,7 @@
   
   <dl>
     <dt>Defined in:</dt>
-    <dd>lib/prct06/gem/individuo.rb</dd>
+    <dd>lib/prct06/individuo.rb</dd>
   </dl>
   
 </div>
@@ -191,7 +191,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#enumerable-instance_method" title="#enumerable (instance method)">#<strong>enumerable</strong>  &#x21d2; Object </a>
+      <a href="#efecto_termogeno-instance_method" title="#efecto_termogeno (instance method)">#<strong>efecto_termogeno</strong>  &#x21d2; Object </a>
     
 
     
@@ -206,7 +206,7 @@
 
   
     <span class="summary_desc"><div class='inline'>
-<p>Método enumerable del mixin Enumerable.</p>
+<p>Método para calcular el ET.</p>
 </div></span>
   
 </li>
@@ -215,7 +215,79 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#initialize-instance_method" title="#initialize (instance method)">#<strong>initialize</strong>(nombre, peso, talla, edad, sexo, cintura, cadera)  &#x21d2; Paciente </a>
+      <a href="#gasto_actividad_fisica-instance_method" title="#gasto_actividad_fisica (instance method)">#<strong>gasto_actividad_fisica</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Método para calcular el GAF.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#gasto_energetico_basal-instance_method" title="#gasto_energetico_basal (instance method)">#<strong>gasto_energetico_basal</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Método para calcular el GEB.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#gasto_energetico_total-instance_method" title="#gasto_energetico_total (instance method)">#<strong>gasto_energetico_total</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Método para calcular el GET.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#initialize-instance_method" title="#initialize (instance method)">#<strong>initialize</strong>(nombre, peso, talla, edad, sexo, cintura, cadera, factor)  &#x21d2; Paciente </a>
     
 
     
@@ -233,6 +305,30 @@
   
     <span class="summary_desc"><div class='inline'>
 <p>Método initialize de la clase Paciente.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#peso_teorico_ideal-instance_method" title="#peso_teorico_ideal (instance method)">#<strong>peso_teorico_ideal</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Método para calcular el PTI.</p>
 </div></span>
   
 </li>
@@ -278,7 +374,7 @@
     <div class="method_details first">
   <h3 class="signature first" id="initialize-instance_method">
   
-    #<strong>initialize</strong>(nombre, peso, talla, edad, sexo, cintura, cadera)  &#x21d2; <tt><span class='object_link'><a href="" title="Paciente (class)">Paciente</a></span></tt> 
+    #<strong>initialize</strong>(nombre, peso, talla, edad, sexo, cintura, cadera, factor)  &#x21d2; <tt><span class='object_link'><a href="" title="Paciente (class)">Paciente</a></span></tt> 
   
 
   
@@ -307,11 +403,11 @@
 37</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/prct06/gem/individuo.rb', line 34</span>
+      <pre class="code"><span class="info file"># File 'lib/prct06/individuo.rb', line 34</span>
 
-<span class='kw'>def</span> <span class='id identifier rubyid_initialize'>initialize</span><span class='lparen'>(</span><span class='id identifier rubyid_nombre'>nombre</span><span class='comma'>,</span> <span class='id identifier rubyid_peso'>peso</span><span class='comma'>,</span> <span class='id identifier rubyid_talla'>talla</span><span class='comma'>,</span> <span class='id identifier rubyid_edad'>edad</span><span class='comma'>,</span> <span class='id identifier rubyid_sexo'>sexo</span><span class='comma'>,</span> <span class='id identifier rubyid_cintura'>cintura</span><span class='comma'>,</span> <span class='id identifier rubyid_cadera'>cadera</span><span class='rparen'>)</span>
+<span class='kw'>def</span> <span class='id identifier rubyid_initialize'>initialize</span><span class='lparen'>(</span><span class='id identifier rubyid_nombre'>nombre</span><span class='comma'>,</span> <span class='id identifier rubyid_peso'>peso</span><span class='comma'>,</span> <span class='id identifier rubyid_talla'>talla</span><span class='comma'>,</span> <span class='id identifier rubyid_edad'>edad</span><span class='comma'>,</span> <span class='id identifier rubyid_sexo'>sexo</span><span class='comma'>,</span> <span class='id identifier rubyid_cintura'>cintura</span><span class='comma'>,</span> <span class='id identifier rubyid_cadera'>cadera</span><span class='comma'>,</span> <span class='id identifier rubyid_factor'>factor</span><span class='rparen'>)</span>
     <span class='ivar'>@nombre</span> <span class='op'>=</span> <span class='id identifier rubyid_nombre'>nombre</span>
-    <span class='ivar'>@datos</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="AntroData.html" title="AntroData (class)">AntroData</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="AntroData.html#initialize-instance_method" title="AntroData#initialize (method)">new</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_peso'>peso</span><span class='comma'>,</span> <span class='id identifier rubyid_talla'>talla</span><span class='comma'>,</span> <span class='id identifier rubyid_edad'>edad</span><span class='comma'>,</span> <span class='id identifier rubyid_sexo'>sexo</span><span class='comma'>,</span> <span class='id identifier rubyid_cintura'>cintura</span><span class='comma'>,</span> <span class='id identifier rubyid_cadera'>cadera</span><span class='rparen'>)</span>
+    <span class='ivar'>@datos</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="AntroData.html" title="AntroData (class)">AntroData</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="AntroData.html#initialize-instance_method" title="AntroData#initialize (method)">new</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_peso'>peso</span><span class='comma'>,</span> <span class='id identifier rubyid_talla'>talla</span><span class='comma'>,</span> <span class='id identifier rubyid_edad'>edad</span><span class='comma'>,</span> <span class='id identifier rubyid_sexo'>sexo</span><span class='comma'>,</span> <span class='id identifier rubyid_cintura'>cintura</span><span class='comma'>,</span> <span class='id identifier rubyid_cadera'>cadera</span><span class='comma'>,</span> <span class='id identifier rubyid_factor'>factor</span><span class='rparen'>)</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -356,7 +452,7 @@
 33</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/prct06/gem/individuo.rb', line 31</span>
+      <pre class="code"><span class="info file"># File 'lib/prct06/individuo.rb', line 31</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_datos'>datos</span>
   <span class='ivar'>@datos</span>
@@ -404,7 +500,7 @@
 48</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/prct06/gem/individuo.rb', line 46</span>
+      <pre class="code"><span class="info file"># File 'lib/prct06/individuo.rb', line 46</span>
 
 <span class='kw'>def</span> <span class='op'>&lt;=&gt;</span> <span class='lparen'>(</span><span class='id identifier rubyid_other'>other</span><span class='rparen'>)</span>
     <span class='id identifier rubyid_datos'>datos</span><span class='period'>.</span><span class='id identifier rubyid_calculate_imc'>calculate_imc</span>  <span class='op'>&lt;=&gt;</span> <span class='id identifier rubyid_other'>other</span><span class='period'>.</span><span class='id identifier rubyid_datos'>datos</span><span class='period'>.</span><span class='id identifier rubyid_calculate_imc'>calculate_imc</span> 
@@ -415,9 +511,9 @@
 </div>
     
       <div class="method_details ">
-  <h3 class="signature " id="enumerable-instance_method">
+  <h3 class="signature " id="efecto_termogeno-instance_method">
   
-    #<strong>enumerable</strong>  &#x21d2; <tt>Object</tt> 
+    #<strong>efecto_termogeno</strong>  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -426,7 +522,179 @@
 </h3><div class="docstring">
   <div class="discussion">
     
-<p>Método enumerable del mixin Enumerable</p>
+<p>Método para calcular el ET</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+65
+66
+67</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/prct06/individuo.rb', line 65</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_efecto_termogeno'>efecto_termogeno</span>
+    <span class='lparen'>(</span><span class='id identifier rubyid_gasto_energetico_basal'>gasto_energetico_basal</span> <span class='op'>*</span> <span class='float'>0.10</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_round'>round</span><span class='lparen'>(</span><span class='int'>2</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="gasto_actividad_fisica-instance_method">
+  
+    #<strong>gasto_actividad_fisica</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Método para calcular el GAF</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+70
+71
+72</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/prct06/individuo.rb', line 70</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_gasto_actividad_fisica'>gasto_actividad_fisica</span>
+    <span class='lparen'>(</span><span class='id identifier rubyid_gasto_energetico_basal'>gasto_energetico_basal</span> <span class='op'>*</span> <span class='ivar'>@datos</span><span class='period'>.</span><span class='id identifier rubyid_factor'>factor</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_round'>round</span><span class='lparen'>(</span><span class='int'>2</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="gasto_energetico_basal-instance_method">
+  
+    #<strong>gasto_energetico_basal</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Método para calcular el GEB</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+56
+57
+58
+59
+60
+61
+62</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/prct06/individuo.rb', line 56</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_gasto_energetico_basal'>gasto_energetico_basal</span>
+    <span class='kw'>if</span> <span class='lparen'>(</span><span class='ivar'>@datos</span><span class='period'>.</span><span class='id identifier rubyid_sexo'>sexo</span> <span class='op'>==</span> <span class='int'>0</span><span class='rparen'>)</span>
+        <span class='lparen'>(</span><span class='lparen'>(</span><span class='int'>10</span> <span class='op'>*</span> <span class='ivar'>@datos</span><span class='period'>.</span><span class='id identifier rubyid_peso'>peso</span><span class='rparen'>)</span> <span class='op'>+</span> <span class='lparen'>(</span><span class='float'>6.25</span> <span class='op'>*</span> <span class='ivar'>@datos</span><span class='period'>.</span><span class='id identifier rubyid_talla'>talla</span> <span class='op'>*</span> <span class='int'>100</span><span class='rparen'>)</span> <span class='op'>-</span> <span class='lparen'>(</span><span class='int'>5</span> <span class='op'>*</span> <span class='ivar'>@datos</span><span class='period'>.</span><span class='id identifier rubyid_edad'>edad</span><span class='rparen'>)</span> <span class='op'>-</span> <span class='int'>161</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_round'>round</span><span class='lparen'>(</span><span class='int'>2</span><span class='rparen'>)</span>
+    <span class='kw'>elsif</span><span class='lparen'>(</span><span class='ivar'>@datos</span><span class='period'>.</span><span class='id identifier rubyid_sexo'>sexo</span> <span class='op'>==</span> <span class='int'>1</span><span class='rparen'>)</span>
+        <span class='lparen'>(</span><span class='lparen'>(</span><span class='int'>10</span> <span class='op'>*</span> <span class='ivar'>@datos</span><span class='period'>.</span><span class='id identifier rubyid_peso'>peso</span><span class='rparen'>)</span> <span class='op'>+</span> <span class='lparen'>(</span><span class='float'>6.25</span> <span class='op'>*</span> <span class='ivar'>@datos</span><span class='period'>.</span><span class='id identifier rubyid_talla'>talla</span> <span class='op'>*</span> <span class='int'>100</span><span class='rparen'>)</span> <span class='op'>-</span> <span class='lparen'>(</span><span class='int'>5</span> <span class='op'>*</span> <span class='ivar'>@datos</span><span class='period'>.</span><span class='id identifier rubyid_edad'>edad</span><span class='rparen'>)</span> <span class='op'>+</span> <span class='int'>5</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_round'>round</span><span class='lparen'>(</span><span class='int'>2</span><span class='rparen'>)</span>
+    <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="gasto_energetico_total-instance_method">
+  
+    #<strong>gasto_energetico_total</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Método para calcular el GET</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+75
+76
+77</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/prct06/individuo.rb', line 75</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_gasto_energetico_total'>gasto_energetico_total</span>
+    <span class='lparen'>(</span><span class='id identifier rubyid_gasto_energetico_basal'>gasto_energetico_basal</span> <span class='op'>+</span> <span class='id identifier rubyid_efecto_termogeno'>efecto_termogeno</span> <span class='op'>+</span> <span class='id identifier rubyid_gasto_actividad_fisica'>gasto_actividad_fisica</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_round'>round</span><span class='lparen'>(</span><span class='int'>2</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="peso_teorico_ideal-instance_method">
+  
+    #<strong>peso_teorico_ideal</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Método para calcular el PTI</p>
 
 
   </div>
@@ -445,10 +713,10 @@
 53</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/prct06/gem/individuo.rb', line 51</span>
+      <pre class="code"><span class="info file"># File 'lib/prct06/individuo.rb', line 51</span>
 
-<span class='kw'>def</span> <span class='id identifier rubyid_enumerable'>enumerable</span>
-    <span class='id identifier rubyid_datos'>datos</span><span class='period'>.</span><span class='id identifier rubyid_calculate_imc'>calculate_imc</span>
+<span class='kw'>def</span> <span class='id identifier rubyid_peso_teorico_ideal'>peso_teorico_ideal</span>
+    <span class='lparen'>(</span><span class='lparen'>(</span><span class='ivar'>@datos</span><span class='period'>.</span><span class='id identifier rubyid_talla'>talla</span> <span class='op'>-</span> <span class='float'>1.50</span><span class='rparen'>)</span> <span class='op'>*</span> <span class='int'>100</span> <span class='op'>*</span> <span class='float'>0.75</span> <span class='op'>+</span> <span class='int'>50</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_round'>round</span><span class='lparen'>(</span><span class='int'>2</span><span class='rparen'>)</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -487,7 +755,7 @@
 43</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/prct06/gem/individuo.rb', line 40</span>
+      <pre class="code"><span class="info file"># File 'lib/prct06/individuo.rb', line 40</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_to_s'>to_s</span>
     <span class='id identifier rubyid_tmp'>tmp</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Nombre </span><span class='embexpr_beg'>#{</span><span class='ivar'>@nombre</span><span class='embexpr_end'>}</span><span class='tstring_content'>\n</span><span class='tstring_end'>&quot;</span></span>
@@ -503,7 +771,7 @@
 </div>
 
       <div id="footer">
-  Generated on Fri Dec  7 00:12:50 2018 by
+  Generated on Thu Dec 20 17:32:16 2018 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.9.16 (ruby-2.5.0).
 </div>
