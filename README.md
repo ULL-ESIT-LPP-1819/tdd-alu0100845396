@@ -1,4 +1,5 @@
 [![Build Status](https://travis-ci.org/ULL-ESIT-LPP-1819/tdd-alu0100845396.svg?branch=master)](https://travis-ci.org/ULL-ESIT-LPP-1819/tdd-alu0100845396)
+[![Coverage Status](https://coveralls.io/repos/github/ULL-ESIT-LPP-1819/tdd-alu0100845396/badge.svg?branch=master)](https://coveralls.io/github/ULL-ESIT-LPP-1819/tdd-alu0100845396?branch=master)
 
 # Práctica 11: Programación Funcional
 
