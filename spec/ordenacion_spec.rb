@@ -10,6 +10,7 @@
 # encoding: UTF-8
 
 require "spec_helper"
+require "benchmark"
 
 describe Etiqueta do
 
@@ -75,6 +76,19 @@ describe Etiqueta do
             expect(@menu_array.sort_each).to eq([421.8, 421.8, 427.8, 427.8, 588.5, 588.5, 948.3, 948.3, 948.3, 948.3])
             expect(@menu_array.sort_for).to eq([421.8, 421.8, 427.8, 427.8, 588.5, 588.5, 948.3, 948.3, 948.3, 948.3])
             expect(@menu_array.map{ |x| x.reduce(:+)}.sort).to eq([421.8, 421.8, 427.8, 427.8, 588.5, 588.5, 948.3, 948.3, 948.3, 948.3])
+        end
+
+        it "Benchmark para Array y ListValue" do
+            n = 50000
+            Benchmark.bm do |x|
+              x.report("for -> Lista:") {n.times do @paciente_list.sort_for; end}
+              x.report("each -> Lista:"){n.times do @paciente_list.sort_each; end}
+              x.report("sort -> Lista:"){n.times do @paciente_list.map{ |x| x.gasto_energetico_total}.sort ; end}
+      
+              x.report("for -> Array:") {n.times do @menu_array.sort_for; end}
+              x.report("each -> Array:"){n.times do @menu_array.sort_each; end}
+              x.report("sort -> Array:"){n.times do @menu_array.map{ |x| x.reduce(:+)}.sort; end}
+            end
         end
     end
 end
