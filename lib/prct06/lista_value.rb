@@ -12,7 +12,7 @@ Node = Struct.new(:value, :next, :prev)
 
 class ListValue
 
-    include Enumerable
+    include Enumerable, Comparable
 
     attr_accessor :head, :tail
 
@@ -81,15 +81,60 @@ class ListValue
         @head.nil?
     end
 
-    def each
+    def each(&block)
         node = Node.new(nil,nil,nil)
         node = @head
 
         while !(node.nil?)
-            yield node.value.enumerable
+            yield node.value
 
         node = node.next
         end
+    end
+
+    def sort_for
+        tmp = map{|x| x.gasto_energetico_total}
+        orden = []
+        orden.push(tmp[0])
+    
+        for i in (1..length - 1)
+            for j in (0..i)
+                if(orden[j] >= tmp[i])
+                    orden.insert(j,tmp[i])
+                break
+                elsif(orden[orden.length - 1] <= tmp[i])
+                    orden.push(tmp[i])
+                break
+                end
+            end
+        end
+    
+        orden
+    end
+    
+    def sort_each
+        tmp = map{ |x| x.gasto_energetico_total}
+    
+        i = 0
+        tmp.each do |x|
+        a = x
+        i1 = i
+        j = i1 + 1
+    
+            tmp[j..tmp.length - 1].each do |y|
+                if (a > y)
+                    a = y
+                    i1 = j
+                end
+                j+=1
+            end
+    
+            tmp[i1] = x
+            tmp[i] = a
+            i+=1
+        end
+    
+        tmp
     end
 end
 

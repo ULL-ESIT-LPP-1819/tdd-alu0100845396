@@ -47,11 +47,6 @@ class Paciente < Individuo
         datos.calculate_imc  <=> other.datos.calculate_imc 
     end
 
-    # Método enumerable del mixin Enumerable 
-    def enumerable
-        datos.calculate_imc
-    end
-
     # Método para calcular el PTI
     def peso_teorico_ideal
         ((@datos.talla - 1.50) * 100 * 0.75 + 50).round(2)
@@ -68,16 +63,16 @@ class Paciente < Individuo
 
     # Método para calcular el ET
     def efecto_termogeno
-        (self.gasto_energetico_basal * 0.10).round(2)
+        (gasto_energetico_basal * 0.10).round(2)
     end
 
     #Método para calcular el GAF
     def gasto_actividad_fisica
-        (self.gasto_energetico_basal * @datos.factor).round(2)
+        (gasto_energetico_basal * @datos.factor).round(2)
     end
 
     # Método para calcular el GET
     def gasto_energetico_total
-        (self.gasto_energetico_basal + self.efecto_termogeno + self.gasto_actividad_fisica).round(2)
+        (gasto_energetico_basal + efecto_termogeno + gasto_actividad_fisica).round(2)
     end
 end

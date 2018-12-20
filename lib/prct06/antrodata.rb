@@ -45,7 +45,7 @@ class AntroData
 
     # Método de cálculo del porcentaje de grasa de individuo
     def calculate_percentgrasa      
-        grasa = (1.2 * @imc + 0.23 * @edad - 10.8 * @sexo - 5.4).round(3)
+        grasa = (1.2 * @imc + 0.23 * @edad - 10.8 * @sexo - 5.4).round(2)
     end
 
     # Método de cálculo de RCC del individuo

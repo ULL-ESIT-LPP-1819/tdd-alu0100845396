@@ -175,8 +175,8 @@ class Etiqueta              # Clase Etiqueta
         valor_ener_kcal <=> other.valor_ener_kcal
     end
 
-    # Método enumerable del mixin Enumerable
-    def enumerable
-        valor_ener_kcal
+    # Método + del mixin Comparable
+    def + (other)
+        valor_ener_kcal + other.valor_ener_kcal
     end
 end
