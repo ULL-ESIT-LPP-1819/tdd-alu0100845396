@@ -74,5 +74,16 @@ describe Etiqueta do
             expect(@paciente_list.collect{ |x| x.to_s}).equal?(String)
             expect(@paciente_list.length).to eq(10)
         end
+
+        it "Se ordena una lista de valoraciones nutricionales de pacientes con for, each y sort correctamente " do
+            expect(@paciente_list.sort_each).to eq([1, 2, 3, 4, 5, 6, 7, 8, 9, 10])
+            expect(@paciente_list.sort_for).to eq([1, 2, 3, 4, 5, 6, 7, 8, 9, 10])
+            expect(@paciente_list.map{ |x| x.gasto_energetico_total}.sort ).to eq([1, 2, 3, 4, 5, 6, 7, 8, 9, 10])
+        end
+        it "Se ordena un array de menús con for, each y sort correctamente" do
+            expect(@menu_array.sort_each).to eq([1, 2, 3, 4, 5, 6, 7, 8, 9, 10])
+            expect(@menu_array.sort_for).to eq([1, 2, 3, 4, 5, 6, 7, 8, 9, 10])
+            expect(@menu_array.map{ |x| x.reduce(:+)}.sort).to eq([1, 2, 3, 4, 5, 6, 7, 8, 9, 10])
+        end
     end
 end
