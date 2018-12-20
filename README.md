@@ -1,6 +1,6 @@
 [![Build Status](https://travis-ci.org/ULL-ESIT-LPP-1819/tdd-alu0100845396.svg?branch=master)](https://travis-ci.org/ULL-ESIT-LPP-1819/tdd-alu0100845396)
 
-# Práctica 10: Programación Funcional
+# Práctica 11: Programación Funcional
 
 *   Universidad de La Laguna - ULL
 *   Asignatura: Lenguajes y Paradigmas de Programación
