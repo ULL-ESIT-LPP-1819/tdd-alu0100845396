@@ -16,6 +16,11 @@ task :spec do
   sh "rspec -I. spec/menu_spec.rb"
 end
 
+desc "Ejecutar las expectativas de ordenación de array y lista"
+task :spec do
+  sh "rspec -I. spec/ordenacion_spec.rb"
+end
+
 desc "Ejecutar con documentacion"
 task :doc do
   sh "rspec -I. spec/etiqueta_nutri_spec.rb --format documentation"
