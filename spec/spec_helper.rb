@@ -3,6 +3,7 @@ require "prct06/etiqueta_nutri"
 require "prct06/lista"
 require "prct06/lista_value"
 require "prct06/individuo"
+require "prct06/array"
 
 RSpec.configure do |config|
 

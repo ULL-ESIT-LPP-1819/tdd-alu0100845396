@@ -66,24 +66,15 @@ describe Etiqueta do
             
         end
 
-        it "Existen 10 menús en un array" do
-            expect(@menu_array.collect{ |x| x.to_s}).equal?(String)
-            expect(@menu_array.size).to eq(10)
-        end
-        it "Existen 10 valoraciones nutricionales en una lista" do
-            expect(@paciente_list.collect{ |x| x.to_s}).equal?(String)
-            expect(@paciente_list.length).to eq(10)
-        end
-
         it "Se ordena una lista de valoraciones nutricionales de pacientes con for, each y sort correctamente " do
-            expect(@paciente_list.sort_each).to eq([1, 2, 3, 4, 5, 6, 7, 8, 9, 10])
-            expect(@paciente_list.sort_for).to eq([1, 2, 3, 4, 5, 6, 7, 8, 9, 10])
-            expect(@paciente_list.map{ |x| x.gasto_energetico_total}.sort ).to eq([1, 2, 3, 4, 5, 6, 7, 8, 9, 10])
+            expect(@paciente_list.sort_each).to eq([1729.97, 1729.97, 1802.86, 1802.86, 1955.05, 1955.05, 3038.1, 3038.1, 3060.66, 3060.66])
+            expect(@paciente_list.sort_for).to eq([1729.97, 1729.97, 1802.86, 1802.86, 1955.05, 1955.05, 3038.1, 3038.1, 3060.66, 3060.66])
+            expect(@paciente_list.map{ |x| x.gasto_energetico_total}.sort ).to eq([1729.97, 1729.97, 1802.86, 1802.86, 1955.05, 1955.05, 3038.1, 3038.1, 3060.66, 3060.66])
         end
         it "Se ordena un array de menús con for, each y sort correctamente" do
-            expect(@menu_array.sort_each).to eq([1, 2, 3, 4, 5, 6, 7, 8, 9, 10])
-            expect(@menu_array.sort_for).to eq([1, 2, 3, 4, 5, 6, 7, 8, 9, 10])
-            expect(@menu_array.map{ |x| x.reduce(:+)}.sort).to eq([1, 2, 3, 4, 5, 6, 7, 8, 9, 10])
+            expect(@menu_array.sort_each).to eq([421.8, 421.8, 427.8, 427.8, 588.5, 588.5, 948.3, 948.3, 948.3, 948.3])
+            expect(@menu_array.sort_for).to eq([421.8, 421.8, 427.8, 427.8, 588.5, 588.5, 948.3, 948.3, 948.3, 948.3])
+            expect(@menu_array.map{ |x| x.reduce(:+)}.sort).to eq([421.8, 421.8, 427.8, 427.8, 588.5, 588.5, 948.3, 948.3, 948.3, 948.3])
         end
     end
 end
