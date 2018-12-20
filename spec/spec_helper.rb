@@ -5,7 +5,7 @@ require "prct06/lista_value"
 require "prct06/individuo"
 require "prct06/array"
 
-require "coveralls"
+require 'coveralls'
 Coveralls.wear!
 
 RSpec.configure do |config|
